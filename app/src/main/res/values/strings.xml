@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Teman_Sebangku App</string>
+    <string name="title_activity_tab_dashboard">activity_tab_dashboard</string>
+    <string name="mn_home">Home</string>
+    <string name="mn_menu">Menu</string>
+    <string name="mn_outlet">Outlet</string>
+    <string name="mn_akun">Akun</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--<resources>-->
+    <!--<string-array name="gender">-->
+    <!--<item>Laki-laki</item>-->
+    <!--<item>Perempuan</item>-->
+
+    <!--</string-array>-->
+    <!--</resources>-->
+</resources>

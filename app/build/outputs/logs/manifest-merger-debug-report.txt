@@ -1,0 +1,292 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:2:1-45:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta2] /home/prima/.gradle/caches/transforms-2/files-2.1/76a2e2bfdf3075be2d30d7c54e673315/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/437999371c0ffcf32a13896797868063/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] /home/prima/.gradle/caches/transforms-2/files-2.1/f0d8566151b8daafbb9621c78ff4aa7d/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/87b1024ed1cae9dca226311d7ac356a4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/prima/.gradle/caches/transforms-2/files-2.1/16a436236feecd511424c3cb6a5add64/AndroidManifest.xml:17:1-22:12
+MERGED from [me.dm7.barcodescanner:zxing:1.9] /home/prima/.gradle/caches/transforms-2/files-2.1/fbaecfc77e961b674ccd13ca7bffba47/AndroidManifest.xml:2:1-13:12
+MERGED from [me.dm7.barcodescanner:core:1.9] /home/prima/.gradle/caches/transforms-2/files-2.1/00c0f1df211e4e7127e0b76636567683/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/8e705a159d3f85e19a154c165bdbd59b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/03ffa3b797703b9ef3b0813f8375a543/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.gridlayout:gridlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/0e1ff7a21b0f80dc5de8c38c6d8a1da3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.1.1] /home/prima/.gradle/caches/transforms-2/files-2.1/dbef2c916a4bc49707655b14b940c11e/AndroidManifest.xml:2:1-11:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/prima/.gradle/caches/transforms-2/files-2.1/76393150d1c894c572a944d8e4cfac7c/AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/be1fd758a98fd6257cb17decf0cbf9ea/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/c14106ac38340351799c373db7c612a9/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/115c8aa5b30f0716b8c0d6e2211ee89c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/ca31ae2daf50e1bff338a83907c971cd/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/f50d2e2a8457f32f33ccf0fd7ad06bea/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/c02bc0dfb72eb05aabf00020ef4d3319/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/ac869ff09be696b437b17f43687ab1f1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/1f74a078cce7b39b1a46c18e0b20ed28/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/68c6fe6e05647e29ba0670adf7853072/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/63544c1cc163a434d420403af18dd74f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/fcc5f41d5f3f78709501ee3df8915539/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/24de3fb8f3ae13737113aff68a6376f8/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/730595d5bb630587e6aea9016e878e4f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/09ea25d23bd642c64f436afd93af7bda/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/43e2ec650a9735ee893280378da27d32/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/6e2e969df16b51162b7afdd1bf53b369/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/80ff446eb2bb2165d38195e0cf6c51c9/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/a382eee519c5b60893f45a4be43defc8/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/acb287cf5fa0c44a399855aa98ba8db7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/8f4db8ad887e745a2d5a2652481ad05c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/4ed6960dc28ebb247b887d4e2f55fcda/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/e1dce70746eb349ac211493265fdfb2a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/99cc442eede072c3c14ec6606b6418ab/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/28f3e764397d04e9ce3bfbfe83fdca6c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/ac17d0c3c0232669ee3bbe6957b6a474/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/0729546b62559f4a1d04f0e9990b0348/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/e7fc2be0ea4d075ca9e0fa4ecc7b9f67/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:2:1-45:12
+	package
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:2:1-45:12
+		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:2:1-45:12
+		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:6:5-76
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:6:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:7:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:8:22-76
+uses-permission#android.permission.CAMERA
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:9:22-62
+application
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:11:5-43:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta2] /home/prima/.gradle/caches/transforms-2/files-2.1/76a2e2bfdf3075be2d30d7c54e673315/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta2] /home/prima/.gradle/caches/transforms-2/files-2.1/76a2e2bfdf3075be2d30d7c54e673315/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.material:material:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/437999371c0ffcf32a13896797868063/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/437999371c0ffcf32a13896797868063/AndroidManifest.xml:22:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.9] /home/prima/.gradle/caches/transforms-2/files-2.1/fbaecfc77e961b674ccd13ca7bffba47/AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.9] /home/prima/.gradle/caches/transforms-2/files-2.1/fbaecfc77e961b674ccd13ca7bffba47/AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9] /home/prima/.gradle/caches/transforms-2/files-2.1/00c0f1df211e4e7127e0b76636567683/AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9] /home/prima/.gradle/caches/transforms-2/files-2.1/00c0f1df211e4e7127e0b76636567683/AndroidManifest.xml:11:5-20
+MERGED from [com.android.volley:volley:1.1.1] /home/prima/.gradle/caches/transforms-2/files-2.1/dbef2c916a4bc49707655b14b940c11e/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /home/prima/.gradle/caches/transforms-2/files-2.1/dbef2c916a4bc49707655b14b940c11e/AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/prima/.gradle/caches/transforms-2/files-2.1/76393150d1c894c572a944d8e4cfac7c/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/prima/.gradle/caches/transforms-2/files-2.1/76393150d1c894c572a944d8e4cfac7c/AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.core:core:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/43e2ec650a9735ee893280378da27d32/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/43e2ec650a9735ee893280378da27d32/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/6e2e969df16b51162b7afdd1bf53b369/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/6e2e969df16b51162b7afdd1bf53b369/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/43e2ec650a9735ee893280378da27d32/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:15:9-41
+	android:roundIcon
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:16:9-54
+	android:icon
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:13:9-35
+	android:theme
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:18:9-40
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:12:9-45
+activity#com.example.ts_app.kasir.activity_dashboard_kasir
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:19:9-77
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:19:19-65
+activity#com.example.ts_app.activity_qr_profile
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:20:9-57
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:20:19-54
+activity#com.example.ts_app.activity_scan_voucher
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:21:9-59
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:21:19-56
+activity#com.example.ts_app.voucher.activity_my_voucher
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:22:9-65
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:22:19-62
+activity#com.example.ts_app.pelanggan.activity_profil
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:23:9-63
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:23:19-60
+activity#com.example.ts_app.pelanggan.activity_detail_voucher
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:24:9-71
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:24:19-68
+activity#com.example.ts_app.pelanggan.activity_voucher
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:25:9-64
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:25:19-61
+activity#com.example.ts_app.pelanggan.activity_detail_menu
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:26:9-68
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:26:19-65
+activity#com.example.ts_app.pelanggan.activity_detail_outlet
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:27:9-70
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:27:19-67
+activity#com.example.ts_app.pelanggan.acitivity_data_diri
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:28:9-67
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:28:19-64
+activity#com.example.ts_app.pelanggan.activity_tab_dashboard
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:29:9-31:68
+	android:label
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:31:13-65
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:30:13-61
+activity#com.example.ts_app.pelanggan.activity_dashboard
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:32:9-66
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:32:19-63
+activity#com.example.ts_app.pelanggan.activity_register
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:33:9-65
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:33:19-62
+activity#com.example.ts_app.activity_input_password
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:34:9-61
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:34:19-58
+activity#com.example.ts_app.splash_screen
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:35:9-41:20
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:35:19-48
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:36:13-40:29
+action#android.intent.action.MAIN
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:39:17-77
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:39:27-74
+activity#com.example.ts_app.activity_login
+ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:42:9-52
+	android:name
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:42:19-49
+uses-sdk
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta2] /home/prima/.gradle/caches/transforms-2/files-2.1/76a2e2bfdf3075be2d30d7c54e673315/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta2] /home/prima/.gradle/caches/transforms-2/files-2.1/76a2e2bfdf3075be2d30d7c54e673315/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/437999371c0ffcf32a13896797868063/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/437999371c0ffcf32a13896797868063/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /home/prima/.gradle/caches/transforms-2/files-2.1/f0d8566151b8daafbb9621c78ff4aa7d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /home/prima/.gradle/caches/transforms-2/files-2.1/f0d8566151b8daafbb9621c78ff4aa7d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/87b1024ed1cae9dca226311d7ac356a4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/87b1024ed1cae9dca226311d7ac356a4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/prima/.gradle/caches/transforms-2/files-2.1/16a436236feecd511424c3cb6a5add64/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/prima/.gradle/caches/transforms-2/files-2.1/16a436236feecd511424c3cb6a5add64/AndroidManifest.xml:20:5-44
+MERGED from [me.dm7.barcodescanner:zxing:1.9] /home/prima/.gradle/caches/transforms-2/files-2.1/fbaecfc77e961b674ccd13ca7bffba47/AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:zxing:1.9] /home/prima/.gradle/caches/transforms-2/files-2.1/fbaecfc77e961b674ccd13ca7bffba47/AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9] /home/prima/.gradle/caches/transforms-2/files-2.1/00c0f1df211e4e7127e0b76636567683/AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9] /home/prima/.gradle/caches/transforms-2/files-2.1/00c0f1df211e4e7127e0b76636567683/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/8e705a159d3f85e19a154c165bdbd59b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/8e705a159d3f85e19a154c165bdbd59b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/03ffa3b797703b9ef3b0813f8375a543/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/03ffa3b797703b9ef3b0813f8375a543/AndroidManifest.xml:20:5-44
+MERGED from [androidx.gridlayout:gridlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/0e1ff7a21b0f80dc5de8c38c6d8a1da3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.gridlayout:gridlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/0e1ff7a21b0f80dc5de8c38c6d8a1da3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.1.1] /home/prima/.gradle/caches/transforms-2/files-2.1/dbef2c916a4bc49707655b14b940c11e/AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] /home/prima/.gradle/caches/transforms-2/files-2.1/dbef2c916a4bc49707655b14b940c11e/AndroidManifest.xml:7:5-43
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/prima/.gradle/caches/transforms-2/files-2.1/76393150d1c894c572a944d8e4cfac7c/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/prima/.gradle/caches/transforms-2/files-2.1/76393150d1c894c572a944d8e4cfac7c/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/be1fd758a98fd6257cb17decf0cbf9ea/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/be1fd758a98fd6257cb17decf0cbf9ea/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/c14106ac38340351799c373db7c612a9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/c14106ac38340351799c373db7c612a9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/115c8aa5b30f0716b8c0d6e2211ee89c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/115c8aa5b30f0716b8c0d6e2211ee89c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/ca31ae2daf50e1bff338a83907c971cd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/ca31ae2daf50e1bff338a83907c971cd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/f50d2e2a8457f32f33ccf0fd7ad06bea/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/f50d2e2a8457f32f33ccf0fd7ad06bea/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/c02bc0dfb72eb05aabf00020ef4d3319/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/c02bc0dfb72eb05aabf00020ef4d3319/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/ac869ff09be696b437b17f43687ab1f1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/ac869ff09be696b437b17f43687ab1f1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/1f74a078cce7b39b1a46c18e0b20ed28/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/1f74a078cce7b39b1a46c18e0b20ed28/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/68c6fe6e05647e29ba0670adf7853072/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/68c6fe6e05647e29ba0670adf7853072/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/63544c1cc163a434d420403af18dd74f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/63544c1cc163a434d420403af18dd74f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/fcc5f41d5f3f78709501ee3df8915539/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/fcc5f41d5f3f78709501ee3df8915539/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/24de3fb8f3ae13737113aff68a6376f8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/24de3fb8f3ae13737113aff68a6376f8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/730595d5bb630587e6aea9016e878e4f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/730595d5bb630587e6aea9016e878e4f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/09ea25d23bd642c64f436afd93af7bda/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/09ea25d23bd642c64f436afd93af7bda/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/43e2ec650a9735ee893280378da27d32/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/43e2ec650a9735ee893280378da27d32/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/6e2e969df16b51162b7afdd1bf53b369/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-rc01] /home/prima/.gradle/caches/transforms-2/files-2.1/6e2e969df16b51162b7afdd1bf53b369/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/80ff446eb2bb2165d38195e0cf6c51c9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/80ff446eb2bb2165d38195e0cf6c51c9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/a382eee519c5b60893f45a4be43defc8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/a382eee519c5b60893f45a4be43defc8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/acb287cf5fa0c44a399855aa98ba8db7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/acb287cf5fa0c44a399855aa98ba8db7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/8f4db8ad887e745a2d5a2652481ad05c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/8f4db8ad887e745a2d5a2652481ad05c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/4ed6960dc28ebb247b887d4e2f55fcda/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/4ed6960dc28ebb247b887d4e2f55fcda/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/e1dce70746eb349ac211493265fdfb2a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/e1dce70746eb349ac211493265fdfb2a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/99cc442eede072c3c14ec6606b6418ab/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/99cc442eede072c3c14ec6606b6418ab/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/28f3e764397d04e9ce3bfbfe83fdca6c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/28f3e764397d04e9ce3bfbfe83fdca6c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/ac17d0c3c0232669ee3bbe6957b6a474/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/ac17d0c3c0232669ee3bbe6957b6a474/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/0729546b62559f4a1d04f0e9990b0348/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/0729546b62559f4a1d04f0e9990b0348/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/e7fc2be0ea4d075ca9e0fa4ecc7b9f67/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/e7fc2be0ea4d075ca9e0fa4ecc7b9f67/AndroidManifest.xml:20:5-44
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] /home/prima/.gradle/caches/transforms-2/files-2.1/76393150d1c894c572a944d8e4cfac7c/AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/prima/.gradle/caches/transforms-2/files-2.1/76393150d1c894c572a944d8e4cfac7c/AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/prima/.gradle/caches/transforms-2/files-2.1/76393150d1c894c572a944d8e4cfac7c/AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/prima/.gradle/caches/transforms-2/files-2.1/76393150d1c894c572a944d8e4cfac7c/AndroidManifest.xml:9:13-64

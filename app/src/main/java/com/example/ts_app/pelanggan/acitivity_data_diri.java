@@ -43,7 +43,10 @@ public class acitivity_data_diri extends AppCompatActivity implements AdapterVie
     ProgressDialog pd;
     TextView txt_status;
     EditText txt_nama, txt_email, txt_domisili, txt_alamat, txt_tgl_lahir;
-    String val_tgl_lahir,tgl_lahir, val_gender, status;
+    String val_tgl_lahir;
+    String tgl_lahir;
+    String val_gender;
+    int status;
     Spinner spin;
     String[] gender= {"Pilih gender", "Perempuan", "Laki-laki"};
     Button btn_simpan;
@@ -66,7 +69,7 @@ public class acitivity_data_diri extends AppCompatActivity implements AdapterVie
         txt_status = (TextView) findViewById(R.id.textView1);
 
         Bundle bundle = getIntent().getExtras();
-        status = bundle.getString("status");
+        status = bundle.getInt("status");
 
         spin = (Spinner) findViewById(R.id.gender);
         spin.setOnItemSelectedListener(this);
@@ -76,7 +79,7 @@ public class acitivity_data_diri extends AppCompatActivity implements AdapterVie
 
         get_profil();
 
-        if (status.equals("1")){
+        if (status == 1){
             txt_status.setText("Rubah data berikut jika ada kesalahan!");
         }else {
             txt_status.setText("Ayoo lengkapi dan dapatkan hadiah dari kami!");
@@ -100,7 +103,7 @@ public class acitivity_data_diri extends AppCompatActivity implements AdapterVie
         btn_simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (status.equals("1")){
+                if (status == 1){
                     edit_profil();
                     txt_status.setText("Rubah data berikut jika ada kesalahan!");
                 }else {

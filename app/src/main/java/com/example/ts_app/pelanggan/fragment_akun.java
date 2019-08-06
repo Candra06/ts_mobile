@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.ts_app.R;
+import com.example.ts_app.activity_login;
 import com.example.ts_app.activity_scan_voucher;
 import com.example.ts_app.config.authdata;
 import com.example.ts_app.voucher.activity_my_voucher;
@@ -69,6 +70,7 @@ public class fragment_akun extends Fragment {
         cardVoucher = (CardView)v.findViewById(R.id.card_voucher);
         cardAbout = (CardView)v.findViewById(R.id.card_about);
         cardKontak = (CardView)v.findViewById(R.id.card_contact);
+        cardLogout = (CardView)v.findViewById(R.id.card_log_out);
 
         cardProfil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,12 +105,14 @@ public class fragment_akun extends Fragment {
             }
         });
 
-//        cardLogout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+        cardLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                authdata.getInstance(getActivity()).logout();
+                Intent i = new Intent(getActivity(), activity_login.class);
+                getActivity().startActivity(i);
+            }
+        });
         return v;
     }
 

@@ -24,6 +24,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.ts_app.config.AppController;
 import com.example.ts_app.config.ServerAPI;
 import com.example.ts_app.config.authdata;
+import com.example.ts_app.kasir.activity_dashboard_kasir;
 import com.example.ts_app.pelanggan.activity_tab_dashboard;
 import com.google.zxing.Result;
 import com.karumi.dexter.Dexter;
@@ -166,7 +167,7 @@ public class activity_scan_voucher extends AppCompatActivity {
     public void onPause() {
 
         super.onPause();
-//        scannerView.stopCamera();
+        scannerView.stopCamera();
         Intent i = new Intent(activity_scan_voucher.this, activity_scan_voucher.class);
         activity_scan_voucher.this.finish();
     }
@@ -194,7 +195,7 @@ public class activity_scan_voucher extends AppCompatActivity {
                     JSONObject obj = new JSONObject(response);
                     JSONObject data = obj.getJSONObject("respon");
                     if (data.getBoolean("savedata")) {
-                        Intent i = new Intent(activity_scan_voucher.this, activity_tab_dashboard.class);
+                        Intent i = new Intent(activity_scan_voucher.this, activity_dashboard_kasir.class);
                         Toast.makeText(activity_scan_voucher.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
                         startActivity(i);
                     } else {

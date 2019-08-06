@@ -149,8 +149,9 @@ public class fragment_home extends Fragment {
                     txt_nama.setText(data.getString("nama"));
                     txt_poin.setText(data.getString("poin")+" poin");
 
-                    if (data.getString("status").equals(0)){
+                    if (data.getInt("status") == 1){
                         DialogForm();
+                        Log.e("alert", "lengkapi");
                     }
 
 

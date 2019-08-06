@@ -32,17 +32,38 @@ public class splash_screen extends AppCompatActivity {
     }
 
     private void onLogin() {
-        Toast.makeText(this, "ini di splash", Toast.LENGTH_SHORT).show();
         if (authdata.getInstance(this).isLoggedIn()) {
-
-//            Integer get_level = authdata.getInstance(splash_screen.this).getLevel();
-            Toast.makeText(this, "ini sudah login "+authdata.getInstance(splash_screen.this).getLevel(), Toast.LENGTH_SHORT).show();
-
             if (authdata.getInstance(getBaseContext()).getLevel().equals("2")){
-                startActivity(new Intent(getBaseContext(), activity_dashboard_kasir.class));
+                Thread timer = new Thread(){
+                    public void run(){
+                        try{
+                            sleep(2000);
+                        }catch (InterruptedException e){
+                            e.printStackTrace();
+                        }
+                        finally {
+                            startActivity(new Intent(getBaseContext(), activity_dashboard_kasir.class));
+                            finish();
+                        }
+                    }
+                };
+                timer.start();
                 Log.e("Levelnya ", authdata.getInstance(getBaseContext()).getLevel());
             }else if(authdata.getInstance(getBaseContext()).getLevel().equals("3")){
-                startActivity(new Intent(getBaseContext(), activity_tab_dashboard.class));
+                Thread timer = new Thread(){
+                    public void run(){
+                        try{
+                            sleep(2000);
+                        }catch (InterruptedException e){
+                            e.printStackTrace();
+                        }
+                        finally {
+                            startActivity(new Intent(getBaseContext(), activity_tab_dashboard.class));
+                            finish();
+                        }
+                    }
+                };
+                timer.start();
                 Log.e("Levelnya ", authdata.getInstance(getBaseContext()).getLevel());
             }
             splash_screen.this.finish();
@@ -51,7 +72,7 @@ public class splash_screen extends AppCompatActivity {
             Thread timer = new Thread(){
                 public void run(){
                     try{
-                        sleep(3000);
+                        sleep(2000);
                     }catch (InterruptedException e){
                         e.printStackTrace();
                     }
@@ -60,7 +81,6 @@ public class splash_screen extends AppCompatActivity {
                         finish();
                     }
                 }
-
             };
             timer.start();
         }

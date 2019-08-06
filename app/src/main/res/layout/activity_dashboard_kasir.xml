@@ -55,21 +55,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:orientation="vertical"
-            android:padding="3dp">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_qr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="3dp"
                     app:cardCornerRadius="3dp">
 
                     <LinearLayout
@@ -80,6 +78,7 @@
                         android:orientation="vertical">
 
                         <ImageView
+                            android:layout_margin="5dp"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             app:srcCompat="@drawable/ic_qr_code" />
@@ -126,6 +125,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:layout_margin="5dp"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 app:srcCompat="@drawable/ic_qr_code" />
@@ -157,6 +157,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:layout_margin="5dp"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 app:srcCompat="@drawable/ic_qr_code" />

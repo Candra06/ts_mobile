@@ -19,10 +19,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.ts_app.config.AppController;
 import com.example.ts_app.config.ServerAPI;
+import com.example.ts_app.config.authdata;
 import com.example.ts_app.kasir.activity_dashboard_kasir;
 import com.example.ts_app.pelanggan.activity_register;
 import com.example.ts_app.pelanggan.activity_tab_dashboard;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -44,12 +46,13 @@ public class activity_input_password extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_password);
 
+
         pd = new ProgressDialog(activity_input_password.this);
         txt_title = findViewById(R.id.txt_title);
         txt_sub_title = findViewById(R.id.txt_sub_title);
         btn_konfirmasi = findViewById(R.id.btn_input_password);
         password = findViewById(R.id.txt_password);
-
+        Log.d("pesan", "halaman input password");
         Bundle bundle = getIntent().getExtras();
         no_hp = bundle.getString("no_hp");
         title = bundle.getString("judul");
@@ -82,26 +85,28 @@ public class activity_input_password extends AppCompatActivity {
                     String get_type = type;
                     JSONObject object = new JSONObject(response);
                     JSONObject data = object.getJSONObject("respon");
+                    JSONObject mydata = data.getJSONObject("user");
 
                     if (data.getBoolean("boollogin")) {
 
-                        SharedPrefManager.getInstance(activity_input_password.this).userLogin(
-                                data.getString("kd_akses"),
-                                data.getString("nama"),
-                                data.getString("username"),
-                                data.getString("auth_key"),
-                                data.getString("level")
+                        authdata.getInstance(activity_input_password.this).setdatauser(
+                                mydata.getString("auth_key"),
+                                mydata.getString("kd_akses"),
+                                mydata.getString("nama"),
+                                mydata.getString("level"),
+                                mydata.getString("exp_date")
                         );
-
-                        if (get_type.equals("karyawan")){
+                        Toast.makeText(activity_input_password.this, "levelnya "+mydata.getString("level"), Toast.LENGTH_SHORT).show();
+                        Log.d("pesan", "levelnya di input password "+mydata.getString("level"));
+                        if (get_type.equals("2")){
                             Toast.makeText(activity_input_password.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_input_password.this, activity_dashboard_kasir.class);
                             activity_input_password.this.startActivity(myIntent);
-                        }else if (get_type.equals("pelanggan")){
+                        }else if (get_type.equals("3")){
                             Toast.makeText(activity_input_password.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_input_password.this, activity_tab_dashboard.class);
                             activity_input_password.this.startActivity(myIntent);
-                        }else if (get_type.equals("pelanggan baru")){
+                        }else if (get_type.equals("0")){
                             Toast.makeText(activity_input_password.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_input_password.this, activity_register.class);
                             activity_input_password.this.startActivity(myIntent);
@@ -112,12 +117,18 @@ public class activity_input_password extends AppCompatActivity {
                         Log.e("auth_key", data.getString("auth_key"));
                     } else {
                         Toast.makeText(activity_input_password.this, "Password salah "+data.getString("pesan"), Toast.LENGTH_LONG).show();
+                        Log.e("No_hp", no_hp);
+                        Log.e("password", password.getText().toString());
+                        Log.e("tipe", "first_login");
                     }
 
                 } catch (JSONException e) {
                     Log.e("Erornya", e.getMessage());
-                    Toast.makeText(activity_input_password.this, "Masuk Gagal", Toast.LENGTH_LONG).show();
+                    Toast.makeText(activity_input_password.this, "Masuk Gagal"+e.getMessage(), Toast.LENGTH_LONG).show();
                     e.printStackTrace();
+                    Log.e("No_hp", no_hp);
+                    Log.e("password", password.getText().toString());
+                    Log.e("tipe", "login");
 
                 }
 
@@ -134,8 +145,7 @@ public class activity_input_password extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 params.put("no_hp", no_hp);
-                params.put("aksi", "login");
-                params.put("tipe", "first_login");
+                params.put("tipe", "login");
                 params.put("password", password.getText().toString());
                 return params;
             }
@@ -143,4 +153,6 @@ public class activity_input_password extends AppCompatActivity {
 
         AppController.getInstance().addToRequestQueue(stringRequest);
     }
+
+
 }

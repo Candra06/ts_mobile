@@ -1486,6 +1486,7 @@ id recycler_blog
 id recycler_menu
 id recycler_myVOucher
 id recycler_outlet
+id recycler_promo
 id reverseSawtooth
 id right
 id right_icon
@@ -1601,6 +1602,7 @@ id txt_komposisi
 id txt_nama
 id txt_nama_kasir
 id txt_nama_menu
+id txt_nama_promo
 id txt_nama_voucher
 id txt_nm_outlet
 id txt_no_hp
@@ -1707,6 +1709,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout dialog_promo
 layout fragment_akun
 layout fragment_home
 layout fragment_menu
@@ -1733,6 +1736,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout template_blog
+layout template_list_promo
 layout template_menu
 layout template_my_voucher
 layout template_outlet
@@ -1999,6 +2003,7 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style Dexter_Internal_Theme_Transparent
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents

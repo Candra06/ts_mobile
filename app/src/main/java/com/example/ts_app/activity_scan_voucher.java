@@ -2,12 +2,14 @@ package com.example.ts_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -24,6 +26,13 @@ import com.example.ts_app.config.ServerAPI;
 import com.example.ts_app.config.authdata;
 import com.example.ts_app.pelanggan.activity_tab_dashboard;
 import com.google.zxing.Result;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.DexterError;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.PermissionRequestErrorListener;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,6 +40,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
@@ -43,9 +53,14 @@ public class activity_scan_voucher extends AppCompatActivity {
     Button btnscan;
     String get_code, kd_promo;
     LinearLayout linear_promo;
+    View dialogView;
+    AlertDialog.Builder dialog;
+    LayoutInflater inflater;
+
+    CharSequence options[] = new CharSequence[] {"Call", "SMS", "Email"};
 
     ArrayList<String> data_promo = new ArrayList<String>();
-    ArrayList<String> index_promo=new ArrayList<String>();
+    ArrayList<String> index_promo = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,74 +69,78 @@ public class activity_scan_voucher extends AppCompatActivity {
         btnscan = (Button) findViewById(R.id.btn_scan);
         pd = new ProgressDialog(activity_scan_voucher.this);
 
+
+//        requestMultiplePermissions();
+
         btnscan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 scan_code();
             }
         });
-
+        get_promo();
         txt_promo = (TextView) findViewById(R.id.txt_pilih_promo);
         linear_promo = (LinearLayout) findViewById(R.id.linear_promo);
         linear_promo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder pictureDialog = new AlertDialog.Builder(activity_scan_voucher.this);
-                pictureDialog.setTitle("Pilih Kavling Anda");
-                pictureDialog.setItems(data_promo.toArray(new String[0]),
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                kd_promo = index_promo.get(which);
-//                                Log.e("kodenya",""+kodekavling);
-                                txt_promo.setText(data_promo.get(which));
+                AlertDialog.Builder builder = new AlertDialog.Builder(activity_scan_voucher.this);
+                builder.setCancelable(false);
+                builder.setTitle("Pilih promo");
+                builder.setItems(data_promo.toArray(new String[0]), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        txt_promo.setText(data_promo.get(which));
+                        kd_promo = index_promo.get(which);
+                    }
+                });
 
-                            }
-                        });
-                pictureDialog.show();
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //the user clicked on Cancel
+                    }
+                });
+                builder.show();
+
             }
         });
-
-
     }
 
-    public void get_promo(){
+
+    public void get_promo() {
         StringRequest senddata = new StringRequest(Request.Method.POST, ServerAPI.GET_DATA, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 JSONObject res = null;
                 try {
                     res = new JSONObject(response);
-                    JSONObject respon = res.getJSONObject("respon");
-                    if(respon.getBoolean("bool")){
+
                         JSONArray arr = res.getJSONArray("data");
                         for (int i = 0; i < arr.length(); i++) {
                             try {
                                 JSONObject datakom = arr.getJSONObject(i);
                                 String ku = datakom.getString("judul_promo");
                                 String koded = datakom.getString("kd_promo");
+                                Log.e("kodenya", datakom.getString("kd_promo"));
                                 data_promo.add(ku);
                                 index_promo.add(koded);
                             } catch (Exception ea) {
                                 ea.printStackTrace();
-
                             }
                         }
 
-                    }else {
-                        Toast.makeText(activity_scan_voucher.this, respon.getString("pesan"), Toast.LENGTH_SHORT).show();
-                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    Log.e("daptkan eror", e.getMessage());
                 }
             }
-        },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.d("volley", "errornya : " + error.getMessage());
-                    }
-                }) {
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("volley", "errornya : " + error.getMessage());
+            }
+        }) {
 
             @Override
             public Map<String, String> getParams() throws AuthFailureError {
@@ -136,7 +155,7 @@ public class activity_scan_voucher extends AppCompatActivity {
     }
 
 
-    public void scan_code(){
+    public void scan_code() {
         scannerView = new ZXingScannerView(this);
         scannerView.setResultHandler(new scan_voucher());
 
@@ -147,16 +166,16 @@ public class activity_scan_voucher extends AppCompatActivity {
     public void onPause() {
 
         super.onPause();
-        scannerView.stopCamera();
+//        scannerView.stopCamera();
         Intent i = new Intent(activity_scan_voucher.this, activity_scan_voucher.class);
-        startActivity(i);
+        activity_scan_voucher.this.finish();
     }
 
-    class scan_voucher implements ZXingScannerView.ResultHandler{
+    class scan_voucher implements ZXingScannerView.ResultHandler {
         @Override
-        public void handleResult(Result result){
+        public void handleResult(Result result) {
             String getcode = result.getText();
-            Toast.makeText(activity_scan_voucher.this, getcode,Toast.LENGTH_SHORT);
+            Toast.makeText(activity_scan_voucher.this, getcode, Toast.LENGTH_SHORT);
             Log.e("code scan", getcode);
             get_code = getcode;
             update_voucher();
@@ -165,11 +184,7 @@ public class activity_scan_voucher extends AppCompatActivity {
         }
     }
 
-    public void promo(){
-
-    }
-
-    public void update_voucher(){
+    public void update_voucher() {
         pd.show();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerAPI.SAVE_DATA, new Response.Listener<String>() {
             @Override
@@ -204,12 +219,48 @@ public class activity_scan_voucher extends AppCompatActivity {
                 Map<String, String> params = new HashMap<>();
                 params.put("tipe", "acc_voucher");
                 params.put("kd_user", get_code);
-                params.put("kd_promo", get_code);
+                params.put("kd_promo", kd_promo);
                 params.put("kode", SharedPrefManager.getInstance(activity_scan_voucher.this).getAuthKey());
                 return params;
             }
         };
         AppController.getInstance().addToRequestQueue(stringRequest);
+    }
+
+    private void  requestMultiplePermissions(){
+        Dexter.withActivity(this)
+                .withPermissions(
+                        Manifest.permission.CAMERA,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE)
+                .withListener(new MultiplePermissionsListener() {
+                    @Override
+                    public void onPermissionsChecked(MultiplePermissionsReport report) {
+                        // check if all permissions are granted
+                        if (report.areAllPermissionsGranted()) {
+//                            Toast.makeText(getApplicationContext(), "All permissions are granted by user!", Toast.LENGTH_SHORT).show();
+                        }
+
+                        // check for permanent denial of any permission
+                        if (report.isAnyPermissionPermanentlyDenied()) {
+                            // show alert dialog navigating to Settings
+                            //openSettingsDialog();
+                        }
+                    }
+
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+                        token.continuePermissionRequest();
+                    }
+                }).
+                withErrorListener(new PermissionRequestErrorListener() {
+                    @Override
+                    public void onError(DexterError error) {
+                        Toast.makeText(getApplicationContext(), "Some Error! ", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .onSameThread()
+                .check();
     }
 
 }

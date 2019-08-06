@@ -19,6 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.ts_app.config.AppController;
 import com.example.ts_app.config.ServerAPI;
 import com.example.ts_app.config.authdata;
+import com.example.ts_app.kasir.activity_dashboard_kasir;
 import com.example.ts_app.pelanggan.activity_tab_dashboard;
 
 import org.json.JSONException;
@@ -42,7 +43,6 @@ public class activity_login extends AppCompatActivity {
         pd = new ProgressDialog(activity_login.this);
         btn_login = findViewById(R.id.btn_join);
 
-        onLogin();
         txtNoHp = findViewById(R.id.txt_no_hp);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,12 +72,12 @@ public class activity_login extends AppCompatActivity {
 
                     if (data.getBoolean("boollogin")) {
 
-                        if (data.getString("status").equals("1")) {
-                            String type = "karyawan";
+                        if (data.getInt("status") == 2) {
+                            String type = "2";
                             String judul = "Masukkan password";
                             String sub_title = "Silahkan Login";
                             String no_hp = txtNoHp.getText().toString();
-                            Toast.makeText(activity_login.this, "Selamat Datang karyawan", Toast.LENGTH_LONG).show();
+                            Toast.makeText(activity_login.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_login.this, activity_input_password.class);
                             myIntent.putExtra("no_hp", no_hp); //Optional parameters
                             myIntent.putExtra("judul", judul); //Optional parameters
@@ -85,12 +85,12 @@ public class activity_login extends AppCompatActivity {
                             myIntent.putExtra("type", type); //Optional parameters
                             activity_login.this.startActivity(myIntent);
                             Log.e("toastnya : ", "selamat datang karyawan");
-                        } else if (data.getString("status").equals("0")) {
-                            String type = "pelanggan baru";
-                            String judul = "Buat password";
-                            String sub_title = "Amankan akun anda";
+                        } else if (data.getInt("status") == 3) {
+                            String type = "3";
+                            String judul = "Masukkan password";
+                            String sub_title = "Silahkan masukkan password anda";
                             String no_hp = txtNoHp.getText().toString();
-                            Toast.makeText(activity_login.this, "Selamat Datang pelanggan baru", Toast.LENGTH_LONG).show();
+                            Toast.makeText(activity_login.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_login.this, activity_input_password.class);
                             myIntent.putExtra("no_hp", no_hp); //Optional parameters
                             myIntent.putExtra("judul", judul); //Optional parameters
@@ -98,12 +98,12 @@ public class activity_login extends AppCompatActivity {
                             myIntent.putExtra("type", type); //Optional parameters
                             activity_login.this.startActivity(myIntent);
                             Log.e("toastnya : ", "selamat datang pelanggan baru");
-                        } else if (data.getString("status").equals("2")) {
-                            String type = "pelanggan";
-                            String judul = "Maukkan password";
-                            String sub_title = "Silahkan Login";
+                        } else if (data.getInt("status") == 0) {
+                            String type = "0";
+                            String judul = "Buat password anda";
+                            String sub_title = "Amankan akun anda";
                             String no_hp = txtNoHp.getText().toString();
-                            Toast.makeText(activity_login.this, "Selamat Datang pelanggan", Toast.LENGTH_LONG).show();
+                            Toast.makeText(activity_login.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_login.this, activity_input_password.class);
                             myIntent.putExtra("no_hp", no_hp); //Optional parameters
                             myIntent.putExtra("judul", judul); //Optional parameters
@@ -112,7 +112,7 @@ public class activity_login extends AppCompatActivity {
                             activity_login.this.startActivity(myIntent);
                             Log.e("toastnya : ", "selamat datangpelanggan");
                         } else {
-                            Log.e("toastnya : ", "selamat datangpelangganmnknj");
+                            Log.e("toastnya : ", "");
                         }
 
                     } else {
@@ -141,9 +141,6 @@ public class activity_login extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("Erronya ", error.toString(), error);
-                Log.e("password ", "");
-                Log.e("no_hp ", txtNoHp.getText().toString());
-                Log.e("Erronya ", "first_login");
                 Toast.makeText(activity_login.this, error.getMessage(), Toast.LENGTH_LONG).show();
 
 
@@ -153,9 +150,7 @@ public class activity_login extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 params.put("no_hp", txtNoHp.getText().toString());
-//                params.put("aksi", "login");
-                params.put("password", "");
-                params.put("tipe", "first_login");
+                params.put("tipe", "cek_nohp");
                 return params;
             }
         };
@@ -163,11 +158,6 @@ public class activity_login extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(stringRequest);
     }
 
-    private void onLogin() {
-        if (authdata.getInstance(this).isLoggedIn()) {
-            activity_login.this.finish();
-            startActivity(new Intent(getBaseContext(), activity_tab_dashboard.class));
-        }
-    }
+
 
 }

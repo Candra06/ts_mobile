@@ -11,7 +11,7 @@ public class authdata {
     private static final String kd_user = "kd_akses";
     private static final String level = "level";
     private static final String exp_date = "exp_date";
-    private static final String nama = "exp_date";
+    private static final String nama = "nama";
 
     public boolean setdatauser(String xkode_auth, String xkode_user,String xnama_user,String xlevel, String xexp_data){
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
@@ -52,6 +52,11 @@ public class authdata {
             return true;
         }
         return false;
+    }
+
+    public String getLevel(){
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(level, null);
     }
 
 }

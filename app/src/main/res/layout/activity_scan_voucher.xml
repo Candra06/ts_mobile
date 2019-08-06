@@ -78,7 +78,6 @@
                     android:background="#00000000"
                     android:fontFamily="@font/sf_pro_display_light"
                     android:hint="Pilih Promo"
-                    android:inputType="textPassword"
                     android:textColorHint="@color/hint" />
 
             </LinearLayout>

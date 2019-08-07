@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -95,8 +96,8 @@ public class fragment_home extends Fragment {
         listBlog = new ArrayList<>();
         adapter_blog = new Adapter_blog(getActivity(),(ArrayList<mdl_blog>) listBlog);
         adapter_promo = new Adapter_promo(getActivity(),(ArrayList<mdl_promo>) listPromo);
-        mManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false);
-        mBlogManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false);
+        mManager = new GridLayoutManager(getActivity(),2);
+        mBlogManager = new GridLayoutManager(getActivity(),2);
         list_blog.setLayoutManager(mBlogManager);
         list_promo.setLayoutManager(mManager);
 

@@ -981,6 +981,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -1189,6 +1190,7 @@ drawable ic_phone
 drawable ic_qr_code
 drawable ic_qr_code_black
 drawable ic_right_arrow
+drawable ic_share_button
 drawable ic_user_nama
 drawable ic_voucher
 drawable kopi_indonesia
@@ -1317,6 +1319,7 @@ id btn_edit_profil
 id btn_input_password
 id btn_join
 id btn_scan
+id btn_share
 id btn_simpan
 id buttonPanel
 id cancel_action
@@ -1333,6 +1336,7 @@ id card_menu
 id card_outlet
 id card_profil
 id card_profil_dashboard
+id card_promo
 id card_qr
 id card_voucher
 id center
@@ -1410,6 +1414,7 @@ id img_back_menu
 id img_back_outlet
 id img_blog_template
 id img_detail_outlet
+id img_detail_promo
 id img_menu
 id img_outlet
 id img_qr
@@ -1486,7 +1491,6 @@ id recycler_blog
 id recycler_menu
 id recycler_myVOucher
 id recycler_outlet
-id recycler_promo
 id reverseSawtooth
 id right
 id right_icon
@@ -1588,6 +1592,7 @@ id txt_contact
 id txt_domisili
 id txt_email
 id txt_gender
+id txt_get_code
 id txt_harga
 id txt_hint_splash
 id txt_jam_buka
@@ -1598,6 +1603,7 @@ id txt_kd_blog
 id txt_kd_menu
 id txt_kd_otlet
 id txt_kd_promo
+id txt_ketentuan
 id txt_komposisi
 id txt_nama
 id txt_nama_kasir
@@ -1617,6 +1623,7 @@ id txt_tgl_lahir
 id txt_title
 id txt_title_menu
 id txt_title_outlet
+id txt_title_promo
 id txt_title_voucher
 id uniform
 id unlabeled
@@ -1683,6 +1690,7 @@ layout activity_dashboard
 layout activity_dashboard_kasir
 layout activity_detail_menu
 layout activity_detail_outlet
+layout activity_detail_promo
 layout activity_detail_voucher
 layout activity_input_password
 layout activity_login
@@ -1690,6 +1698,7 @@ layout activity_my_voucher
 layout activity_profil
 layout activity_qr_profile
 layout activity_register
+layout activity_scan_qr
 layout activity_scan_voucher
 layout activity_splash_screen
 layout activity_tab_dashboard
@@ -1709,7 +1718,6 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
-layout dialog_promo
 layout fragment_akun
 layout fragment_home
 layout fragment_menu

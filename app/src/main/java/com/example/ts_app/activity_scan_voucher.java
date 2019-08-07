@@ -117,19 +117,19 @@ public class activity_scan_voucher extends AppCompatActivity {
                 try {
                     res = new JSONObject(response);
 
-                        JSONArray arr = res.getJSONArray("data");
-                        for (int i = 0; i < arr.length(); i++) {
-                            try {
-                                JSONObject datakom = arr.getJSONObject(i);
-                                String ku = datakom.getString("judul_promo");
-                                String koded = datakom.getString("kd_promo");
-                                Log.e("kodenya", datakom.getString("kd_promo"));
-                                data_promo.add(ku);
-                                index_promo.add(koded);
-                            } catch (Exception ea) {
-                                ea.printStackTrace();
-                            }
+                    JSONArray arr = res.getJSONArray("data");
+                    for (int i = 0; i < arr.length(); i++) {
+                        try {
+                            JSONObject datakom = arr.getJSONObject(i);
+                            String ku = datakom.getString("judul_promo");
+                            String koded = datakom.getString("kd_promo");
+                            Log.e("kodenya", datakom.getString("kd_promo"));
+                            data_promo.add(ku);
+                            index_promo.add(koded);
+                        } catch (Exception ea) {
+                            ea.printStackTrace();
                         }
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();

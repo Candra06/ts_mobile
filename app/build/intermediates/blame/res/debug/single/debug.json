@@ -1616,6 +1616,10 @@
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f0d8566151b8daafbb9621c78ff4aa7d/res/layout/abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout_activity_edit_profil_kasir.xml.flat",
+        "source": "/home/prima/Android/AndroidProject/app/src/main/res/layout/activity_edit_profil_kasir.xml"
+    },
+    {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f0d8566151b8daafbb9621c78ff4aa7d/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
@@ -1846,6 +1850,10 @@
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f0d8566151b8daafbb9621c78ff4aa7d/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout_activity_profil_kasir.xml.flat",
+        "source": "/home/prima/Android/AndroidProject/app/src/main/res/layout/activity_profil_kasir.xml"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",

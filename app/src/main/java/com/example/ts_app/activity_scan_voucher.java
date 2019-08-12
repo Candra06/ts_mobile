@@ -167,9 +167,7 @@ public class activity_scan_voucher extends AppCompatActivity {
     public void onPause() {
 
         super.onPause();
-        scannerView.stopCamera();
-        Intent i = new Intent(activity_scan_voucher.this, activity_scan_voucher.class);
-        activity_scan_voucher.this.finish();
+        setContentView(R.layout.activity_scan_voucher);
     }
 
     class scan_voucher implements ZXingScannerView.ResultHandler {

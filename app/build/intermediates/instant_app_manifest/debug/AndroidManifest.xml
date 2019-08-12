@@ -33,6 +33,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.ts_app.activity_edit_profil_kasir" />
+        <activity android:name="com.example.ts_app.activity_profil_kasir" />
         <activity android:name="com.example.ts_app.template_list_promo" />
         <activity android:name="com.example.ts_app.activity_detail_blog" />
         <activity android:name="com.example.ts_app.activity_detail_promo" />

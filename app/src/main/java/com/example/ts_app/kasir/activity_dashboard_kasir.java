@@ -17,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.ts_app.R;
+import com.example.ts_app.activity_profil_kasir;
 import com.example.ts_app.activity_scan_voucher;
 import com.example.ts_app.config.AppController;
 import com.example.ts_app.config.ImageUtil;
@@ -60,7 +61,8 @@ public class activity_dashboard_kasir extends AppCompatActivity {
         profil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(activity_dashboard_kasir.this, activity_profil_kasir.class);
+                activity_dashboard_kasir.this.startActivity(intent);
             }
         });
 

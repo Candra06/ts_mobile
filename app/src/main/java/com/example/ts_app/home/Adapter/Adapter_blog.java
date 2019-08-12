@@ -2,6 +2,7 @@ package com.example.ts_app.home.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ts_app.R;
+import com.example.ts_app.activity_detail_blog;
+import com.example.ts_app.activity_detail_promo;
 import com.example.ts_app.config.ServerAPI;
 import com.example.ts_app.home.Model.mdl_blog;
 import com.squareup.picasso.Picasso;
@@ -48,6 +51,7 @@ public class Adapter_blog extends RecyclerView.Adapter<Adapter_blog.ViewHolder> 
                 .load(ServerAPI.IPSever + md.getGambar())
                 .into(holder.txt_gambar);
         holder.url = md.getGambar();
+        holder.kd_blog = md.getKode_blog();
         Fragment fragment;
 
     }
@@ -59,13 +63,23 @@ public class Adapter_blog extends RecyclerView.Adapter<Adapter_blog.ViewHolder> 
         private CardView cv;
         private TextView txt_judul_blog, txt_kd_blog;
         ImageView txt_gambar;
-        String url;
+        String url, kd_blog;
 
         public ViewHolder(View v) {
             super(v);
             txt_kd_blog=(TextView)v.findViewById(R.id.txt_kd_blog);
             txt_judul_blog=(TextView)v.findViewById(R.id.txt_judul_blog);
             txt_gambar=(ImageView)v.findViewById(R.id.img_blog_template);
+            cv=(CardView) v.findViewById(R.id.card_blog);
+
+            cv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), activity_detail_blog.class);
+                    intent.putExtra("kd_blog", kd_blog);
+                    v.getContext().startActivity(intent);
+                }
+            });
     }
 }
 }

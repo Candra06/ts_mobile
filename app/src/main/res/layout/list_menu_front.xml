@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:layout_marginTop="3dp">
+    <TextView
+        android:id="@+id/txt_outlet_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="Suspicious0dp"
+        android:layout_weight="1"
+        android:text="Nama outlet"
+        android:layout_marginStart="3dp"/>
+    <TextView
+        android:id="@+id/txt_status_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="Suspicious0dp"
+        android:layout_weight="1"
+        android:text="status"
+        android:textAlignment="textEnd"
+        android:layout_marginEnd="8dp"
+        android:textStyle="italic"/>
+
+
+</LinearLayout>

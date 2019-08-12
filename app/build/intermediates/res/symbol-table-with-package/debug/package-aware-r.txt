@@ -1327,6 +1327,7 @@ id cardView
 id cardView_nama
 id card_about
 id card_alamat
+id card_blog
 id card_contact
 id card_domisili
 id card_email
@@ -1410,13 +1411,16 @@ id ignore
 id image
 id imageView
 id img_back
+id img_back_dt_blog
 id img_back_menu
 id img_back_outlet
 id img_blog_template
+id img_detail_blog
 id img_detail_outlet
 id img_detail_promo
 id img_menu
 id img_outlet
+id img_promo
 id img_qr
 id img_qr_voucher
 id img_scan
@@ -1544,6 +1548,7 @@ id staticLayout
 id staticPostLayout
 id status_bar_latest_event_content
 id status_buka
+id status_menu
 id stop
 id stretch
 id submenuarrow
@@ -1569,6 +1574,7 @@ id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
+id tgl_upload
 id time
 id title
 id titleDividerNoCustom
@@ -1588,7 +1594,9 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id txt_alamat
+id txt_author
 id txt_contact
+id txt_conten
 id txt_domisili
 id txt_email
 id txt_gender
@@ -1612,15 +1620,18 @@ id txt_nama_promo
 id txt_nama_voucher
 id txt_nm_outlet
 id txt_no_hp
+id txt_outlet_nama
 id txt_password
 id txt_pilih_promo
 id txt_poin
 id txt_status
+id txt_status_menu
 id txt_status_voucher
 id txt_sub_title
 id txt_syarat_voucher
 id txt_tgl_lahir
 id txt_title
+id txt_title_blog
 id txt_title_menu
 id txt_title_outlet
 id txt_title_promo
@@ -1688,6 +1699,7 @@ layout acitivity_data_diri
 layout activity_about
 layout activity_dashboard
 layout activity_dashboard_kasir
+layout activity_detail_blog
 layout activity_detail_menu
 layout activity_detail_outlet
 layout activity_detail_promo
@@ -1702,6 +1714,7 @@ layout activity_scan_qr
 layout activity_scan_voucher
 layout activity_splash_screen
 layout activity_tab_dashboard
+layout activity_template_list_promo
 layout activity_voucher
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -1722,6 +1735,7 @@ layout fragment_akun
 layout fragment_home
 layout fragment_menu
 layout fragment_outlet
+layout list_menu_front
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action

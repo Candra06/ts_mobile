@@ -221,6 +221,7 @@ public class fragment_home extends Fragment {
                                 mdl_promo md = new mdl_promo();
                                 md.setKode_promo(data.getString("kd_promo"));
                                 md.setJudul_promo(data.getString("judul_promo"));
+                                md.setGambar(data.getString("foto"));
                                 listPromo.add(md);
                             } catch (Exception ea) {
                                 ea.printStackTrace();
@@ -278,6 +279,10 @@ public class fragment_home extends Fragment {
                                 md.setJudul(data.getString("judul"));
                                 md.setGambar(data.getString("foto"));
                                 listBlog.add(md);
+
+                                Log.e("data blog 1:", data.getString("kd_blog"));
+                                Log.e("data blog 2:", data.getString("judul"));
+                                Log.e("data blog 3:", data.getString("foto"));
                             } catch (Exception ea) {
                                 ea.printStackTrace();
 

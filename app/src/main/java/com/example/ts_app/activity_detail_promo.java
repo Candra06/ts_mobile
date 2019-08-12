@@ -147,6 +147,7 @@ public class activity_detail_promo extends AppCompatActivity {
                             .load(ServerAPI.IPSever+data.getString("foto"))
                             .into(img_detail_promo);
 
+                    Log.e("link foto", ServerAPI.IPSever+data.getString("foto"));
                 } catch (JSONException e) {
                     Log.e("Erornya", e.getMessage());
                     Toast.makeText(activity_detail_promo.this, "Masuk Gagal" + e.getMessage(), Toast.LENGTH_LONG).show();

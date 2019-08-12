@@ -15,10 +15,10 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/img_back_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_back"
-            android:id="@+id/img_back_menu"/>
+            app:srcCompat="@drawable/ic_back" />
 
         <TextView
             android:id="@+id/txt_title_menu"
@@ -35,20 +35,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints"
-        android:layout_margin="0dp"
         tools:layout_editor_absoluteX="0dp">
 
         <ImageView
+            android:id="@+id/imgbanner"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:scaleType="fitXY"
-            android:src="@drawable/coffee_tubruk"
-            android:id="@+id/imgbanner"/>
+            android:src="@drawable/coffee_tubruk" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,12 +57,11 @@
             android:padding="5dp">
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_weight="1"
+                android:orientation="horizontal"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp">
 
@@ -70,17 +69,17 @@
                     android:id="@+id/txt_harga"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RP. 8.000"
                     android:layout_weight="1"
-                    android:textStyle="bold"/>
+                    android:text="RP. 8.000"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_jam_tutup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ready"
                     android:layout_weight="1"
-                    android:textAlignment="textEnd"/>
+                    android:text="Ready"
+                    android:textAlignment="textEnd" />
             </LinearLayout>
 
             <View
@@ -107,20 +106,41 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
                 android:text="Deskripsi : "
-                android:textStyle="bold"
-                android:layout_marginBottom="6dp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txt_komposisi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jl. Candi Borobudur No.21 Malang"
                 android:layout_marginBottom="10dp"
+                android:maxLines="4"
                 android:singleLine="false"
-                android:maxLines="4"/>
+                android:text="Jl. Candi Borobudur No.21 Malang" />
 
         </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/status_menu">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </ScrollView>
+
 
     </LinearLayout>
 

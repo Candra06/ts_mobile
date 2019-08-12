@@ -32,6 +32,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.ts_app.template_list_promo" />
+        <activity android:name="com.example.ts_app.activity_detail_blog" />
         <activity android:name="com.example.ts_app.activity_detail_promo" />
         <activity android:name="com.example.ts_app.scan_qr" />
         <activity android:name="com.example.ts_app.kasir.activity_dashboard_kasir" />

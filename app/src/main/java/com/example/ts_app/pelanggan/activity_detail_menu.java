@@ -1,7 +1,11 @@
 package com.example.ts_app.pelanggan;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +24,11 @@ import com.example.ts_app.R;
 import com.example.ts_app.config.AppController;
 import com.example.ts_app.config.ServerAPI;
 import com.example.ts_app.config.authdata;
+import com.example.ts_app.menu.adapter_menu;
+import com.example.ts_app.menu.mdl_menu;
+import com.example.ts_app.voucher.activity_my_voucher;
+import com.example.ts_app.voucher.adapter_myvoucher;
+import com.example.ts_app.voucher.mdl_voucher;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -28,8 +37,10 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 
@@ -38,6 +49,15 @@ public class activity_detail_menu extends AppCompatActivity {
     ImageView img_detail_menu, img_back_menu;
     ProgressDialog pd;
     String kd_menu;
+
+    private List<model_status_menu> listDetail;
+    private RecyclerView list_detail;
+    private com.example.ts_app.pelanggan.adapter_status_menu adapter_detail;
+    com.example.ts_app.pelanggan.adapter_status_menu mAdapter;
+    RecyclerView.LayoutManager mManager;
+
+
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,10 +80,18 @@ public class activity_detail_menu extends AppCompatActivity {
             }
         });
 
+        list_detail = (RecyclerView) findViewById(R.id.status_menu);
+        listDetail = new ArrayList<>();
+        adapter_detail = new adapter_status_menu(activity_detail_menu.this,(ArrayList<model_status_menu>) listDetail);
+        mManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        list_detail.setLayoutManager(mManager);
+
+        list_detail.setAdapter(adapter_detail);
+
         Bundle bundle = getIntent().getExtras();
         kd_menu = bundle.getString("kd_menu");
-        test_jam();
         loadJson();
+        show_status();
     }
 
     public void loadJson() {
@@ -82,18 +110,10 @@ public class activity_detail_menu extends AppCompatActivity {
                     txt_harga.setText(data.getString("harga"));
                     txt_komposisi.setText(data.getString("deskripsi"));
 
-                    txt_contact.setText(data.getString("kontak"));
 
                     Picasso.get()
                             .load(ServerAPI.IPSever+data.getString("foto"))
                             .into(img_detail_menu);
-
-//                    if (data.getString("open").toString() > ) {
-//                        txt_status.setText("Perempuan");
-//                    } else if (data.getString("gender").equals("2")) {
-//                        txt_status.setText("Laki-laki");
-//                    }
-
 
 
                 } catch (JSONException e) {
@@ -125,21 +145,64 @@ public class activity_detail_menu extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(stringRequest);
     }
 
-    public void test_jam(){
-        String startTime;
-        startTime = "21:06:30";
-        StringTokenizer tk = new StringTokenizer(startTime);
-        String time = tk.nextToken();
+    public void show_status() {
+        pd.setMessage("Menampilkan Data");
+        pd.setCancelable(false);
+        pd.show();
+        StringRequest senddata = new StringRequest(Request.Method.POST, ServerAPI.GET_DATA, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                JSONObject res = null;
+                try {
+                    res = new JSONObject(response);
+                    JSONArray arr = res.getJSONArray("data");
+                    if (arr.length() > 0) {
+                        for (int i = 0; i < arr.length(); i++) {
+                            try {
+                                JSONObject data = arr.getJSONObject(i);
+                                model_status_menu md = new model_status_menu();
+                                md.setKd_detail(data.getString("kd_detail"));
+                                md.setOutlet(data.getString("nama_outlet"));
+                                md.setStatus(data.getString("status"));
+                                Log.e("outlet", data.getString("nama_outlet"));
+                                Log.e("status", data.getString("status"));
+                                listDetail.add(md);
+                            } catch (Exception ea) {
+                                ea.printStackTrace();
 
-        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
-        SimpleDateFormat sdfs = new SimpleDateFormat("hh:mm a");
-        Date dt;
-        try {
-            dt = sdf.parse(time);
-            String out = "Time Display: " + sdfs.format(dt);
-            Log.e("jamnya : ", out);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+                            }
+                        }
+                        pd.cancel();
+                        adapter_detail.notifyDataSetChanged();
+                    } else {
+                        pd.cancel();
+//                        not_found.setVisibility(View.VISIBLE);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    pd.cancel();
+                }
+            }
+        },new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                pd.cancel();
+                Log.d("volley", "errornya : " + error.getMessage());
+            }
+        }) {
+
+            @Override
+            public Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("kode", authdata.getInstance(activity_detail_menu.this).getAuth());
+                params.put("tipe", "detail_status");
+                params.put("kd_menu", kd_menu);
+                return params;
+            }
+        };
+
+        AppController.getInstance().addToRequestQueue(senddata);
     }
+
+
 }

@@ -7,48 +7,40 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.4.2"
-    timestamp="1565215079243"
+    timestamp="1565636549028"
     token="8179773251252973152"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="197" />
+        duration="225" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="19" />
+        duration="48" />
     <task
         name="verifier"
-        duration="9" />
+        duration="20" />
 
     <artifact
-        location="/home/prima/Android/AndroidProject/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1565214293043"
-        verifier="FULL_BUILD_REQUESTED" >
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1565631077422"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
@@ -57,19 +49,25 @@
             location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/home/prima/Android/AndroidProject/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
@@ -77,49 +75,52 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1565214683310"
-        verifier="R_CLASS_CHANGE" >
-        <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1565635669213"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
             location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
             location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
-        <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="FIELD_ADDED"
-        timestamp="1565214817960"
+        timestamp="1565636416001"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1565215079243"
+        timestamp="1565636549028"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/prima/Android/AndroidProject/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
     </build>
 

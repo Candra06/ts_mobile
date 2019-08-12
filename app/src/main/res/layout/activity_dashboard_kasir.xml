@@ -81,7 +81,7 @@
                             android:layout_margin="5dp"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            app:srcCompat="@drawable/ic_qr_code" />
+                            app:srcCompat="@drawable/ic_qr_code_black" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -128,7 +128,7 @@
                                 android:layout_margin="5dp"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                app:srcCompat="@drawable/ic_qr_code" />
+                                app:srcCompat="@drawable/ic_coffee_menu" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -160,7 +160,7 @@
                                 android:layout_margin="5dp"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                app:srcCompat="@drawable/ic_qr_code" />
+                                app:srcCompat="@drawable/ic_user_nama" />
 
                             <TextView
                                 android:layout_width="match_parent"

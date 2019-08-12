@@ -70,16 +70,16 @@ public class activity_register extends AppCompatActivity {
                     JSONObject data = object.getJSONObject("respon");
 
                     if (data.getBoolean("bool")) {
-//                        Toast.makeText(activity_register.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
-//                        Intent myIntent = new Intent(activity_register.this, activity_tab_dashboard.class);
-//                        activity_register.this.startActivity(myIntent);
+                        Toast.makeText(activity_register.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
+                        Intent myIntent = new Intent(activity_register.this, activity_tab_dashboard.class);
+                        activity_register.this.startActivity(myIntent);
                         Toast.makeText(activity_register.this, "Input Berhasil "+data.getString("pesan"), Toast.LENGTH_LONG).show();
                         SharedPrefManager.getInstance(activity_register.this).register();
                     } else {
 
-//                        Toast.makeText(activity_input_password.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
-//                        Intent myIntent = new Intent(activity_input_password.this, activity_input_password.class);
-//                        activity_input_password.this.startActivity(myIntent);
+                        Toast.makeText(activity_register.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
+                        Intent myIntent = new Intent(activity_register.this, activity_register.class);
+                        activity_register.this.startActivity(myIntent);
                         Toast.makeText(activity_register.this, "Input Gagal "+data.getString("pesan"), Toast.LENGTH_LONG).show();
                     }
 

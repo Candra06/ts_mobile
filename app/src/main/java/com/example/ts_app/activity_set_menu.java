@@ -89,6 +89,7 @@ public class activity_set_menu extends AppCompatActivity {
                                 md.setMenu(data.getString("menu"));
                                 md.setGambar(data.getString("foto"));
                                 md.setStatus(data.getInt("status"));
+                                md.setKd_detail(data.getString("kd_detail"));
                                 Log.e("kd", data.getString("kd_menu"));
                                 Log.e("nama", data.getString("menu"));
                                 listMenu.add(md);

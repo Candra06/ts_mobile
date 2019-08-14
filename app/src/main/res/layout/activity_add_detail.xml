@@ -121,12 +121,13 @@
 
                 <Spinner
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:spinnerMode="dropdown"
                     android:background="#00000000"
                     android:fontFamily="@font/sf_pro_display_light"
                     android:hint="Jenis Kelamin"
                     android:id="@+id/status_menu"
+                    android:layout_marginLeft="10dp"
                     android:textColorHint="@color/hint"/>
 
             </LinearLayout>

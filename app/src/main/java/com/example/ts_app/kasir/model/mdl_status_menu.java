@@ -3,6 +3,7 @@ package com.example.ts_app.kasir.model;
 public class mdl_status_menu {
 
     String menu;
+    String kd_detail;
     String kode_menu;
     String gambar;
     int status;
@@ -11,9 +12,16 @@ public class mdl_status_menu {
         this.menu = menu;
         this.kode_menu = kode_menu;
         this.gambar = gambar;
+        this.kd_detail = kd_detail;
 
     }
 
+
+    public void setKd_detail(String kd_detail){
+        this.kd_detail = kd_detail;
+    }
+
+    public String getKd_detail(){ return kd_detail;}
 
     public void setMenu(String menu) {
         this.menu = menu;

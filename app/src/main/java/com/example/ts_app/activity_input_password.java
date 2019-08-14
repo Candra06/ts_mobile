@@ -94,7 +94,8 @@ public class activity_input_password extends AppCompatActivity {
                                 mydata.getString("kd_akses"),
                                 mydata.getString("nama"),
                                 mydata.getString("level"),
-                                mydata.getString("exp_date")
+                                mydata.getString("exp_date"),
+                                data.getString("kd_outlet")
                         );
                         Toast.makeText(activity_input_password.this, "levelnya "+mydata.getString("level"), Toast.LENGTH_SHORT).show();
                         Log.d("pesan", "levelnya di input password "+mydata.getString("level"));
@@ -124,7 +125,7 @@ public class activity_input_password extends AppCompatActivity {
 
                 } catch (JSONException e) {
                     Log.e("Erornya", e.getMessage());
-                    Toast.makeText(activity_input_password.this, "Masuk Gagal"+e.getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(activity_input_password.this, "Login Gagal", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                     Log.e("No_hp", no_hp);
                     Log.e("password", password.getText().toString());

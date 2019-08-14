@@ -12,8 +12,9 @@ public class authdata {
     private static final String level = "level";
     private static final String exp_date = "exp_date";
     private static final String nama = "nama";
+    private static final String kd_outlet = "kd_outlet";
 
-    public boolean setdatauser(String xkode_auth, String xkode_user,String xnama_user,String xlevel, String xexp_data){
+    public boolean setdatauser(String xkode_auth, String xkode_user,String xnama_user,String xlevel, String xexp_data, String xkd_outlet){
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -22,6 +23,7 @@ public class authdata {
         editor.putString(level, xlevel);
         editor.putString(exp_date, xexp_data);
         editor.putString(nama, xnama_user);
+        editor.putString(kd_outlet, xkd_outlet);
 
         editor.apply();
 
@@ -44,6 +46,11 @@ public class authdata {
     public String getKd_user(){
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString(kd_user, null);
+    }
+
+    public String getKd_outlet(){
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(kd_outlet, null);
     }
 
     public boolean isLoggedIn() {

@@ -777,6 +777,7 @@ color font_primary
 color foreground_material_dark
 color foreground_material_light
 color form_white
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color hint
@@ -829,6 +830,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color red
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -924,6 +926,8 @@ dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+dimen appbar_padding
+dimen appbar_padding_top
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -1166,6 +1170,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_about
+drawable ic_add
 drawable ic_back
 drawable ic_birthdate
 drawable ic_coffee_menu
@@ -1190,6 +1195,7 @@ drawable ic_phone
 drawable ic_qr_code
 drawable ic_qr_code_black
 drawable ic_right_arrow
+drawable ic_settings
 drawable ic_share_button
 drawable ic_user_nama
 drawable ic_voucher
@@ -1318,6 +1324,7 @@ id bounce
 id btn_edit_profil
 id btn_input_password
 id btn_join
+id btn_save
 id btn_scan
 id btn_share
 id btn_simpan
@@ -1334,6 +1341,7 @@ id card_email
 id card_gender
 id card_log_out
 id card_menu
+id card_menu_status
 id card_no_hp
 id card_outlet
 id card_password
@@ -1360,6 +1368,7 @@ id coordinator
 id cos
 id custom
 id customPanel
+id cv_status
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -1436,6 +1445,7 @@ id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
+id kd_menu
 id labeled
 id largeLabel
 id layout
@@ -1449,6 +1459,7 @@ id linearLayout3
 id linear_alamat
 id linear_domisili
 id linear_gender
+id linear_menu
 id linear_nama
 id linear_noHp
 id linear_password
@@ -1456,6 +1467,7 @@ id linear_promo
 id linearsolusi
 id listMode
 id list_item
+id ln_status
 id masked
 id media_actions
 id message
@@ -1629,6 +1641,7 @@ id txt_nm_outlet
 id txt_no_hp
 id txt_outlet_nama
 id txt_password
+id txt_pilih_menu
 id txt_pilih_promo
 id txt_poin
 id txt_status
@@ -1704,6 +1717,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout acitivity_data_diri
 layout activity_about
+layout activity_add_detail
 layout activity_dashboard
 layout activity_dashboard_kasir
 layout activity_detail_blog
@@ -1721,6 +1735,7 @@ layout activity_qr_profile
 layout activity_register
 layout activity_scan_qr
 layout activity_scan_voucher
+layout activity_set_menu
 layout activity_splash_screen
 layout activity_tab_dashboard
 layout activity_template_list_promo
@@ -1772,6 +1787,7 @@ layout template_menu
 layout template_my_voucher
 layout template_outlet
 layout template_promo
+layout template_status_menu
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -1835,6 +1851,10 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string tab_text_1
+string tab_text_2
+string title_activity_set_menu
+string title_activity_setting_menu
 string title_activity_tab_dashboard
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -1843,6 +1863,9 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style AppTheme
+style AppTheme_AppBarOverlay
+style AppTheme_NoActionBar
+style AppTheme_PopupOverlay
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

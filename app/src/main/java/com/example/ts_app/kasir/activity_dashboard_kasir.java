@@ -19,11 +19,10 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.ts_app.R;
 import com.example.ts_app.activity_profil_kasir;
 import com.example.ts_app.activity_scan_voucher;
+import com.example.ts_app.activity_set_menu;
 import com.example.ts_app.config.AppController;
-import com.example.ts_app.config.ImageUtil;
 import com.example.ts_app.config.ServerAPI;
 import com.example.ts_app.config.authdata;
-import com.example.ts_app.pelanggan.activity_profil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -69,7 +68,8 @@ public class activity_dashboard_kasir extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(activity_dashboard_kasir.this, activity_set_menu.class);
+                activity_dashboard_kasir.this.startActivity(intent);
             }
         });
     }
@@ -89,8 +89,9 @@ public class activity_dashboard_kasir extends AppCompatActivity {
                     txt_nama.setText(data.getString("nama"));
 
                 } catch (JSONException e) {
-                    Log.e("Erornya", e.getMessage());
-                    Toast.makeText(activity_dashboard_kasir.this, "Masuk Gagal", Toast.LENGTH_LONG).show();
+                    Log.e("Erornyacoy", e.getMessage());
+                    Log.e("auth", authdata.getInstance(activity_dashboard_kasir.this).getAuth());
+                    Toast.makeText(activity_dashboard_kasir.this, "Gagal mengambil data", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
 
                 }
@@ -101,7 +102,7 @@ public class activity_dashboard_kasir extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 pd.dismiss();
                 Toast.makeText(activity_dashboard_kasir.this, error.getMessage(), Toast.LENGTH_LONG).show();
-                Log.d("Erronya ", error.getMessage(), error);
+                Log.d("Erronya boss", error.getMessage(), error);
             }
         }) {
             @Override

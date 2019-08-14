@@ -704,6 +704,10 @@
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f0d8566151b8daafbb9621c78ff4aa7d/res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable_ic_add.xml.flat",
+        "source": "/home/prima/Android/AndroidProject/app/src/main/res/drawable/ic_add.xml"
+    },
+    {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f0d8566151b8daafbb9621c78ff4aa7d/res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -748,6 +752,10 @@
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f0d8566151b8daafbb9621c78ff4aa7d/res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable_ic_settings.xml.flat",
+        "source": "/home/prima/Android/AndroidProject/app/src/main/res/drawable/ic_settings.xml"
+    },
+    {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout_design_navigation_item.xml.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/437999371c0ffcf32a13896797868063/res/layout/design_navigation_item.xml"
     },
@@ -762,6 +770,10 @@
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/43e2ec650a9735ee893280378da27d32/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout_activity_add_detail.xml.flat",
+        "source": "/home/prima/Android/AndroidProject/app/src/main/res/layout/activity_add_detail.xml"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
@@ -1040,12 +1052,16 @@
         "source": "/home/prima/Android/AndroidProject/app/src/main/res/font/roboto_regular.ttf"
     },
     {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout_template_list_promo.xml.flat",
+        "source": "/home/prima/Android/AndroidProject/app/src/main/res/layout/template_list_promo.xml"
+    },
+    {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable_ic_dashboard_black_24dp.xml.flat",
         "source": "/home/prima/Android/AndroidProject/app/src/main/res/drawable/ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout_template_list_promo.xml.flat",
-        "source": "/home/prima/Android/AndroidProject/app/src/main/res/layout/template_list_promo.xml"
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout_template_status_menu.xml.flat",
+        "source": "/home/prima/Android/AndroidProject/app/src/main/res/layout/template_status_menu.xml"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout_abc_popup_menu_item_layout.xml.flat",
@@ -1250,6 +1266,10 @@
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f0d8566151b8daafbb9621c78ff4aa7d/res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout_activity_set_menu.xml.flat",
+        "source": "/home/prima/Android/AndroidProject/app/src/main/res/layout/activity_set_menu.xml"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable_design_password_eye.xml.flat",

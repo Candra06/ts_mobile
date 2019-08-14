@@ -23,7 +23,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_edit_profil_kasir"></activity>
+        <activity android:name=".activity_add_detail"></activity>
+        <activity android:name=".activity_set_menu" />
+        <activity android:name=".activity_edit_profil_kasir" />
         <activity android:name=".activity_profil_kasir" />
         <activity android:name=".template_list_promo" />
         <activity android:name=".activity_detail_blog" />

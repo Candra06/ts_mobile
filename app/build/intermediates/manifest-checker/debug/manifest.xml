@@ -32,6 +32,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.ts_app.activity_add_detail" />
+        <activity android:name="com.example.ts_app.activity_set_menu" />
         <activity android:name="com.example.ts_app.activity_edit_profil_kasir" />
         <activity android:name="com.example.ts_app.activity_profil_kasir" />
         <activity android:name="com.example.ts_app.template_list_promo" />
@@ -70,6 +72,11 @@
             android:name="com.squareup.picasso.PicassoProvider"
             android:authorities="com.example.ts_app.com.squareup.picasso"
             android:exported="false" />
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.example.ts_app.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.example.ts_app.com.android.tools.ir.server.InstantRunContentProvider"

@@ -9,4 +9,6 @@
     <color name="font_primary">#000</color>
     <color name="font">#D0000000</color>
     <color name="form_white">#F0F1F1F1</color>
+    <color name="green">#029908</color>
+    <color name="red">#F0BE0101</color>
 </resources>

@@ -71,12 +71,31 @@
                         "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,263,264,271,275,311,314",
+                        "startLines": "2,3,4,5,263,264,271,275,313,316",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,19262,19378,19835,20129,22137,22309",
-                        "endLines": "2,3,4,5,263,264,271,275,313,318",
+                        "startOffsets": "55,159,223,290,19262,19378,19835,20129,22267,22439",
+                        "endLines": "2,3,4,5,263,264,271,275,315,320",
                         "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,19373,19499,19956,20252,22304,22642"
+                        "endOffsets": "154,218,285,349,19373,19499,19956,20252,22434,22772"
+                    }
+                },
+                {
+                    "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/249eefc5ebde4fa1c4674e193cfe5be4/res/values-v21/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "172",
+                        "endLines": "5",
+                        "endColumns": "8",
+                        "endOffsets": "297"
+                    },
+                    "to": {
+                        "startLines": "311",
+                        "startColumns": "4",
+                        "startOffsets": "22137",
+                        "endLines": "312",
+                        "endColumns": "8",
+                        "endOffsets": "22262"
                     }
                 }
             ]

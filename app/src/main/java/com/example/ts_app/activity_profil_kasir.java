@@ -37,7 +37,8 @@ public class activity_profil_kasir extends AppCompatActivity {
         cv_status_outlet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(activity_profil_kasir.this, MapsActivity.class);
+                activity_profil_kasir.this.startActivity(i);
             }
         });
 

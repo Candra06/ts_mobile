@@ -1,6 +1,7 @@
 package com.example.ts_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -46,6 +47,9 @@ import java.util.Map;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.Manifest.permission_group.CAMERA;
+
 public class activity_scan_voucher extends AppCompatActivity {
 
     private ZXingScannerView scannerView;
@@ -71,7 +75,9 @@ public class activity_scan_voucher extends AppCompatActivity {
         pd = new ProgressDialog(activity_scan_voucher.this);
 
 
-//        requestMultiplePermissions();
+        requestMultiplePermissions();
+
+
 
         btnscan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,6 +163,7 @@ public class activity_scan_voucher extends AppCompatActivity {
 
 
     public void scan_code() {
+//        requestPermission();
         scannerView = new ZXingScannerView(this);
         scannerView.setResultHandler(new scan_voucher());
 
@@ -260,6 +267,11 @@ public class activity_scan_voucher extends AppCompatActivity {
                 })
                 .onSameThread()
                 .check();
+    }
+
+    private void requestPermission(){
+        ActivityCompat.requestPermissions(this, new String[]{CAMERA}, 1);
+
     }
 
 }

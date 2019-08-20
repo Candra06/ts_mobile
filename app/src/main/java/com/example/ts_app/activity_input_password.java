@@ -77,7 +77,7 @@ public class activity_input_password extends AppCompatActivity {
     public void confirm(){
         pd.setMessage("Tunggu....");
         pd.show();
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerAPI.SAVE_DATA, new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerAPI.LOGIN, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 pd.dismiss();

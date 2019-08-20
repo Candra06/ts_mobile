@@ -29,6 +29,7 @@ import com.example.ts_app.SharedPrefManager;
 import com.example.ts_app.activity_set_menu;
 import com.example.ts_app.config.AppController;
 import com.example.ts_app.config.ServerAPI;
+import com.example.ts_app.config.authdata;
 import com.example.ts_app.kasir.model.mdl_status_menu;
 import com.example.ts_app.pelanggan.activity_detail_menu;
 import com.example.ts_app.pelanggan.activity_register;
@@ -186,6 +187,7 @@ public class adpt_status_menu extends RecyclerView.Adapter<com.example.ts_app.ka
                     params.put("status", String.valueOf(2));
                     params.put("tipe", "update_status_menu");
                     params.put("kd_detail", kd_detail);
+                    params.put("kode", authdata.getInstance(itemView.getContext()).getAuth());
                     return params;
                 }
             };
@@ -234,6 +236,7 @@ public class adpt_status_menu extends RecyclerView.Adapter<com.example.ts_app.ka
                     params.put("status", String.valueOf(1));
                     params.put("tipe", "update_status_menu");
                     params.put("kd_detail", kd_detail);
+                    params.put("kode", authdata.getInstance(itemView.getContext()).getAuth());
                     return params;
                 }
             };

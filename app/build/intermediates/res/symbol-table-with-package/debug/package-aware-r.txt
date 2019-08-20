@@ -2087,7 +2087,9 @@ id live_stream_seek_bar
 id ln_status
 id loading_indicator
 id logo_only
+id lokasi
 id map
+id map_user
 id masked
 id match_global_nicknames
 id match_parent

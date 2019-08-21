@@ -140,7 +140,7 @@ public final class R {
         public static final int time = 0x7f0a020d;
         public static final int title = 0x7f0a020e;
         public static final int top = 0x7f0a0215;
-        public static final int vertical = 0x7f0a0253;
+        public static final int vertical = 0x7f0a0254;
     }
     public static final class integer {
         private integer() {}

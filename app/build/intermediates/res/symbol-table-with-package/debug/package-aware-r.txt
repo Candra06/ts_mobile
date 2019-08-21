@@ -2320,6 +2320,7 @@ id txt_alamat
 id txt_author
 id txt_contact
 id txt_conten
+id txt_distance
 id txt_domisili
 id txt_email
 id txt_gender

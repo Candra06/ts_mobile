@@ -1,4 +1,4 @@
-#Wed Aug 21 20:14:39 WIB 2019
+#Thu Aug 22 01:41:52 WIB 2019
 base.0=/home/prima/Android/AndroidProject/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

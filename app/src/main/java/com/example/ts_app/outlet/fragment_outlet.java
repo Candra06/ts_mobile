@@ -50,6 +50,7 @@ import com.example.ts_app.config.authdata;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -85,20 +86,15 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
     ProgressDialog pd;
     private List<mdl_outlet> listOutlet;
     private RecyclerView list_outlet;
-    private LocationManager locationManager;
-    private LocationListener listener;
     Marker mCurrLocationMarker;
     private com.example.ts_app.outlet.adapter_outlet adapter_outlet;
     RecyclerView.LayoutManager mManager;
-    GoogleApiClient mGoogleApiClient;
     GoogleMap mg_map;
     MapView mapView;
     TextView txt_lokasi;
     Geocoder geocoder;
     View v;
-    LocationRequest mLocationRequest;
-    private Location mLocation;
-    double latitude = 0, longitude = 0;
+    double latitude = -6.2293867, longitude = 106.6894287;
 
     List addresses = new ArrayList();
 
@@ -138,34 +134,40 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
         }
 
     }
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_outlet, container, false);
         mapView = (MapView) v.findViewById(R.id.map_user);
 
-//        getLocation();
-        loadJson();
+        assert getArguments() != null;
+
+        if (!getArguments().getString("latitude").equals("") && !getArguments().getString("longitude").equals("")){
+            String kk = getArguments().getString("latitude");
+            String kuku = getArguments().getString("longitude");
+            latitude = Double.parseDouble(kk);
+            longitude = Double.parseDouble(kuku);
+        }else {
+            latitude = -6.2293867;
+            longitude = 106.6894287;
+        }
+
         geocoder = new Geocoder(getContext(), Locale.getDefault());
         checkLocationPermission();
         txt_lokasi = (TextView) v.findViewById(R.id.lokasi);
+        listOutlet = new ArrayList<>();
+//        getLocation();
+        loadJson();
 
-        pd = new ProgressDialog(getActivity());
+        pd = new ProgressDialog(getContext());
         cli = LocationServices.getFusedLocationProviderClient(getContext());
 
         list_outlet = (RecyclerView) v.findViewById(R.id.recycler_outlet);
         list_outlet.setHasFixedSize(true);
-        listOutlet = new ArrayList<>();
         adapter_outlet = new adapter_outlet(getActivity(), (ArrayList<mdl_outlet>) listOutlet);
         mManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         list_outlet.setLayoutManager(mManager);
-
         list_outlet.setAdapter(adapter_outlet);
-
-
         return v;
     }
 
@@ -179,39 +181,12 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
             mapView.getMapAsync(this);
         }
     }
-
-
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
 
-//    @Override
-//    public void onLocationChanged(Location location) {
-//        try {
-//            //Add initialization:
-//            geocoder = new Geocoder(getContext(), Locale.getDefault());
-//            //Make sure that the Location is not null:
-//            if (location != null) {
-//                addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 10);
-//            }
-//
-//        } catch (IOException e) {
-//            Log.e("LocateMe", "Could not get Geocoder data", e);
-//
-//        }
-//
-//        mLocation = location;
-//        if (mCurrLocationMarker != null) {
-//            mCurrLocationMarker.remove();
-//        }
-////Showing Current Location Marker on Map
-//
-//        if (mGoogleApiClient != null)
-//            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient,
-//                    (com.google.android.gms.location.LocationListener) this);
-//    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -219,47 +194,11 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
 
         mg_map = googleMap;
         mg_map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        googleMap.addMarker(new MarkerOptions().position(new LatLng(-7.9784695,112.5617418)).title("Lokasi anda").snippet("Lokasi terkini"));
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(latitude,longitude)).title("Lokasi anda").snippet("Lokasi terkini"));
 
-        CameraPosition Liberty = CameraPosition.builder().target(new LatLng(-7.9784695,112.5617418)).zoom(16).bearing(0).tilt(45).build();
+        CameraPosition Liberty = CameraPosition.builder().target(new LatLng(latitude,longitude)).zoom(16).bearing(0).tilt(45).build();
         googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(Liberty));
-
-
     }
-
-//    protected synchronized void buildGoogleApiClient() {
-//        mGoogleApiClient = new GoogleApiClient.Builder(getContext())
-//                .addConnectionCallbacks(this)
-//                .addOnConnectionFailedListener(this)
-//                .addApi(LocationServices.API)
-//                .build();
-//        mGoogleApiClient.connect();
-//    }
-
-//    @SuppressLint("RestrictedApi")
-//    @Override
-//    public void onConnected(@Nullable Bundle bundle) {
-//        mLocationRequest = new LocationRequest();
-//        mLocationRequest.setInterval(1000);
-//        mLocationRequest.setFastestInterval(1000);
-//        mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-//        if (ContextCompat.checkSelfPermission(getContext(),
-//                Manifest.permission.ACCESS_FINE_LOCATION)
-//                == PackageManager.PERMISSION_GRANTED) {
-//            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient,
-//                    mLocationRequest, (com.google.android.gms.location.LocationListener) getContext());
-//        }
-//    }
-
-//    @Override
-//    public void onConnectionSuspended(int i) {
-//
-//    }
-//
-//    @Override
-//    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-//
-//    }
 
     public boolean checkLocationPermission() {
         if (ContextCompat.checkSelfPermission(getContext(),
@@ -289,17 +228,10 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
 
         Log.e("Long", String.valueOf(longitude));
         Log.e("Lat", String.valueOf(latitude));
-        LatLng latLng = new LatLng(latitude, longitude); //menentukan awal lokasi
-        mg_map.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mg_map.animateCamera(CameraUpdateFactory.zoomTo(11));
-        mCurrLocationMarker = mg_map.addMarker(new MarkerOptions().position(latLng).title("Lokasi")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA)));
     }
 
     void getLocation() {
         try {
-            locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
-//            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5, getFragmentManager().get);
             if(!(latitude == 0) && !(longitude == 0)){
                 loadJson();
                 LatLng latLng = new LatLng(latitude, longitude); //menentukan awal lokasi
@@ -321,9 +253,9 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
     }
 
     public void loadJson() {
-        pd.setMessage("Menampilkan Data");
-        pd.setCancelable(false);
-        pd.show();
+//        pd.setMessage("Menampilkan Data");
+//        pd.setCancelable(false);
+//        pd.show();
         StringRequest senddata = new StringRequest(Request.Method.POST, ServerAPI.GET_DATA, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -339,33 +271,30 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
                                 md.setKode_outlet(data.getString("kd_outlet"));
                                 md.setOutlet(data.getString("nama_outlet"));
                                 md.setGambar(data.getString("foto"));
+                                md.setDistance(data.getDouble("distance"));
                                 listOutlet.add(md);
                             } catch (Exception ea) {
                                 ea.printStackTrace();
 
                             }
                         }
-                        pd.cancel();
+//                        pd.cancel();
                         adapter_outlet.notifyDataSetChanged();
                     } else {
-                        pd.cancel();
-//                        not_found.setVisibility(View.VISIBLE);
-                        Log.e("Lat", String.valueOf(latitude));
-                        Log.e("Lon", String.valueOf(longitude));
                         Log.e("Data tidak ditemukan", "Datanya gk keluar");
                         Toast.makeText(getContext(), "Lokasi tidak ditemukan", Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    pd.cancel();
-                    Log.e("Lat Lon", String.valueOf(latitude) + " " + String.valueOf(longitude));
+//                    pd.cancel();
+//                    Log.e("Lat Lon", String.valueOf(latitude) + " " + String.valueOf(longitude));
                     Toast.makeText(getContext(), "Lokasi tidak ditemukan bray", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                pd.cancel();
+//                pd.cancel();
                 Log.d("volley", "errornya : " + error.getMessage());
                 Toast.makeText(getContext(), "Lokasi tidak ditemukan bro", Toast.LENGTH_SHORT).show();
             }

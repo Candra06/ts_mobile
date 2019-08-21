@@ -18,6 +18,7 @@ import com.example.ts_app.pelanggan.activity_detail_outlet;
 import com.example.ts_app.config.ServerAPI;
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class adapter_outlet extends RecyclerView.Adapter<adapter_outlet.ViewHolder> {
@@ -44,6 +45,9 @@ public class adapter_outlet extends RecyclerView.Adapter<adapter_outlet.ViewHold
         mdl_outlet md = list_outlet.get(position);
         holder.txt_nama_outlet.setText(md.getOutlet());
         holder.txt_kd_outlet.setText(md.getKode_outlet());
+        holder.distance = Double.parseDouble(new DecimalFormat("##.##").format(md.getDistance()));
+
+        holder.txt_distance.setText(String.valueOf(holder.distance));
         Picasso.get()
                 .load(ServerAPI.IPSever + md.getGambar())
                 .into(holder.txt_gambar);
@@ -58,15 +62,17 @@ public class adapter_outlet extends RecyclerView.Adapter<adapter_outlet.ViewHold
     }
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private CardView cv;
-        private TextView txt_kd_outlet, txt_nama_outlet, status;
+        private TextView txt_kd_outlet, txt_nama_outlet, status, txt_distance;
         private ImageView txt_gambar;
         String url, kd_outlet;
+        Double distance;
 
         public ViewHolder(View v) {
             super(v);
             txt_kd_outlet=(TextView)v.findViewById(R.id.txt_kd_otlet);
             txt_nama_outlet=(TextView)v.findViewById(R.id.txt_nm_outlet);
             txt_gambar=(ImageView)v.findViewById(R.id.img_outlet);
+            txt_distance=(TextView)v.findViewById(R.id.txt_distance);
             cv = (CardView)v.findViewById(R.id.card_outlet);
 
             cv.setOnClickListener(new View.OnClickListener() {

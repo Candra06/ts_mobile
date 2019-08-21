@@ -5,11 +5,13 @@ public class mdl_outlet {
     String kode_outlet;
     String gambar;
     int status;
+    double distance;
 
     public mdl_outlet(){
         this.outlet = outlet;
         this.kode_outlet = kode_outlet;
         this.gambar = gambar;
+        this.distance = distance;
 
     }
 
@@ -36,4 +38,10 @@ public class mdl_outlet {
     }
 
     public String getGambar(){ return gambar;}
+
+    public void setDistance(Double distance){
+        this.distance = distance;
+    }
+
+    public double getDistance(){ return distance;}
 }

@@ -48,7 +48,6 @@ public class splash_screen extends AppCompatActivity {
                     }
                 };
                 timer.start();
-                Log.e("Levelnya ", authdata.getInstance(getBaseContext()).getLevel());
             }else if(authdata.getInstance(getBaseContext()).getLevel().equals("3")){
                 Thread timer = new Thread(){
                     public void run(){
@@ -64,7 +63,6 @@ public class splash_screen extends AppCompatActivity {
                     }
                 };
                 timer.start();
-                Log.e("Levelnya ", authdata.getInstance(getBaseContext()).getLevel());
             }
             splash_screen.this.finish();
         }else{

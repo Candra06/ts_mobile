@@ -20,7 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-public class activity_tab_dashboard extends AppCompatActivity {
+public class activity_tab_dashboard extends AppCompatActivity  {
     private TextView mTextMessage;
 
 

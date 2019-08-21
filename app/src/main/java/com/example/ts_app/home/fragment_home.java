@@ -149,13 +149,9 @@ public class fragment_home extends Fragment {
 
                     txt_nama.setText(data.getString("nama"));
                     txt_poin.setText(data.getString("poin")+" poin");
-                    Log.e("datanya", data.getString("nama"));
-                    Log.e("datanya", data.getString("poin"));
-                    Log.e("datanya", authdata.getInstance(getActivity()).getAuth());
 
                     if (data.getInt("status") == 1){
                         DialogForm();
-                        Log.e("alert", "lengkapi");
                     }
 
 
@@ -282,10 +278,6 @@ public class fragment_home extends Fragment {
                                 md.setJudul(data.getString("judul"));
                                 md.setGambar(data.getString("foto"));
                                 listBlog.add(md);
-
-                                Log.e("data blog 1:", data.getString("kd_blog"));
-                                Log.e("data blog 2:", data.getString("judul"));
-                                Log.e("data blog 3:", data.getString("foto"));
                             } catch (Exception ea) {
                                 ea.printStackTrace();
 

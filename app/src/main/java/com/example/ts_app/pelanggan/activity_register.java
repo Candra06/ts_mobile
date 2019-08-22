@@ -20,6 +20,7 @@ import com.example.ts_app.R;
 import com.example.ts_app.SharedPrefManager;
 import com.example.ts_app.config.AppController;
 import com.example.ts_app.config.ServerAPI;
+import com.example.ts_app.config.authdata;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,7 +30,7 @@ import java.util.Map;
 
 public class activity_register extends AppCompatActivity {
 
-    EditText txt_nama, txt_email;
+    EditText txt_nama, txt_email, txt_referal;
     Button btn_simpan;
     ProgressDialog progressDialog;
     String kd_user;
@@ -42,6 +43,7 @@ public class activity_register extends AppCompatActivity {
         progressDialog = new ProgressDialog(activity_register.this);
         txt_nama = findViewById(R.id.txt_nama);
         txt_email = findViewById(R.id.txt_email);
+        txt_email = findViewById(R.id.txt_referall);
         btn_simpan = findViewById(R.id.btn_simpan);
 
         btn_simpan.setOnClickListener(new View.OnClickListener() {
@@ -104,8 +106,10 @@ public class activity_register extends AppCompatActivity {
                 Map<String, String> params = new HashMap<>();
                 params.put("email", txt_email.getText().toString());
                 params.put("nama", txt_nama.getText().toString());
+                params.put("referal", txt_referal.getText().toString());
                 params.put("tipe", "register");
-                params.put("kd_user", SharedPrefManager.getInstance(activity_register.this).getKeyUserId());
+                params.put("kd_user", authdata.getInstance(activity_register.this).getKd_user());
+                params.put("kode", authdata.getInstance(activity_register.this).getAuth());
                 return params;
             }
         };

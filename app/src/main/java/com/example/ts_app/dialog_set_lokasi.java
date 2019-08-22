@@ -105,7 +105,7 @@ public class dialog_set_lokasi extends BottomSheetDialogFragment {
                 params.put("latitude", txt_latitude.getText().toString());
                 params.put("alamat", txt_lokasi.getText().toString());
                 params.put("tipe", "set_location");
-                params.put("kode", SharedPrefManager.getInstance(getContext()).getAuthKey());
+                params.put("kode", authdata.getInstance(getContext()).getAuth());
                 params.put("kd_outlet", authdata.getInstance(getContext()).getKd_outlet());
                 return params;
             }

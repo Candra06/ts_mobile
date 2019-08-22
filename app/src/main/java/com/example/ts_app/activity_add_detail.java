@@ -205,6 +205,7 @@ public class activity_add_detail extends AppCompatActivity implements AdapterVie
                 params.put("status", status);
                 params.put("tipe", "add_detail_menu");
                 params.put("kd_outlet", authdata.getInstance(activity_add_detail.this).getKd_outlet());
+                params.put("kode", authdata.getInstance(activity_add_detail.this).getAuth());
                 return params;
             }
         };

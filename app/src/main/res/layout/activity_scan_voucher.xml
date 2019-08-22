@@ -68,7 +68,7 @@
                     android:layout_width="27dp"
                     android:layout_height="24dp"
                     android:padding="2dp"
-                    app:srcCompat="@drawable/ic_password" />
+                    app:srcCompat="@drawable/ic_promo" />
 
                 <TextView
                     android:id="@+id/txt_pilih_promo"

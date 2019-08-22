@@ -61,7 +61,7 @@ public class activity_detail_outlet extends AppCompatActivity {
                 Intent intent = new Intent(activity_detail_outlet.this, activity_tab_dashboard.class);
 //                intent.putExtra("kd_auth", authdata.getInstance(activity_profil.this).getAuth()); //Optional parameters
 
-                activity_detail_outlet.this.finish();
+                activity_detail_outlet.this.startActivity(intent);
             }
         });
 

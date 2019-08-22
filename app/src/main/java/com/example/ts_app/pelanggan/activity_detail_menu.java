@@ -76,7 +76,7 @@ public class activity_detail_menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(activity_detail_menu.this, activity_tab_dashboard.class);
-                activity_detail_menu.this.finish();
+                activity_detail_menu.this.startActivity(intent);
             }
         });
 

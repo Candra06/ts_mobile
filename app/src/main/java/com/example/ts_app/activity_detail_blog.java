@@ -3,6 +3,7 @@ package com.example.ts_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.example.ts_app.config.AppController;
 import com.example.ts_app.config.ImageUtil;
 import com.example.ts_app.config.ServerAPI;
 import com.example.ts_app.config.authdata;
+import com.example.ts_app.pelanggan.activity_tab_dashboard;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
@@ -56,6 +58,13 @@ public class activity_detail_blog extends AppCompatActivity {
 
         img_detail_blog = (ImageView) findViewById(R.id.img_detail_blog);
         img_back = (ImageView) findViewById(R.id.img_back_dt_blog);
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity_detail_blog.this, activity_tab_dashboard.class);
+                activity_detail_blog.this.startActivity(intent);
+            }
+        });
 
         loadJSON();
     }

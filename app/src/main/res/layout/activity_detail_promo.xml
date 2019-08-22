@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_back"
-            android:id="@+id/img_back_outlet"/>
+            android:id="@+id/img_back_promo"/>
 
         <TextView
             android:id="@+id/txt_title_promo"

@@ -20,6 +20,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.ts_app.config.AppController;
 import com.example.ts_app.config.ServerAPI;
 import com.example.ts_app.config.authdata;
+import com.example.ts_app.pelanggan.activity_tab_dashboard;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
@@ -58,6 +59,14 @@ public class activity_detail_promo extends AppCompatActivity {
         txt_conten = (TextView) findViewById(R.id.txt_ketentuan);
 
         img_detail_promo = (ImageView) findViewById(R.id.img_detail_promo);
+        img_back = (ImageView) findViewById(R.id.img_back_promo);
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity_detail_promo.this, activity_tab_dashboard.class);
+                activity_detail_promo.this.startActivity(intent);
+            }
+        });
 
         loadJSON();
         btn_share.setOnClickListener(new View.OnClickListener() {

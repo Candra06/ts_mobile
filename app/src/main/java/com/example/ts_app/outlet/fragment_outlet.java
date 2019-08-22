@@ -165,7 +165,7 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
         list_outlet = (RecyclerView) v.findViewById(R.id.recycler_outlet);
         list_outlet.setHasFixedSize(true);
         adapter_outlet = new adapter_outlet(getActivity(), (ArrayList<mdl_outlet>) listOutlet);
-        mManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        mManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         list_outlet.setLayoutManager(mManager);
         list_outlet.setAdapter(adapter_outlet);
         return v;

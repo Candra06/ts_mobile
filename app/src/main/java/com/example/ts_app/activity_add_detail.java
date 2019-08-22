@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -42,6 +43,7 @@ public class activity_add_detail extends AppCompatActivity implements AdapterVie
     Button btn_save;
     String kd_menu, status;
     Spinner status_menu;
+    ImageView img_back;
 
     String[] stm= {"Pilih status", "Ready", "Habis"};
 
@@ -64,6 +66,15 @@ public class activity_add_detail extends AppCompatActivity implements AdapterVie
         ln_status = (LinearLayout) findViewById(R.id.ln_status);
 
         btn_save = (Button) findViewById(R.id.btn_save);
+
+        img_back = (ImageView) findViewById(R.id.img_back);
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity_add_detail.this, activity_set_menu.class);
+                activity_add_detail.this.startActivity(intent);
+            }
+        });
 
         status_menu = (Spinner) findViewById(R.id.status_menu);
         status_menu.setOnItemSelectedListener(this);

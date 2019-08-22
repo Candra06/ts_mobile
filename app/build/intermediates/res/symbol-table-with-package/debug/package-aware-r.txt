@@ -1657,8 +1657,10 @@ drawable ic_plusone_medium_off_client
 drawable ic_plusone_small_off_client
 drawable ic_plusone_standard_off_client
 drawable ic_plusone_tall_off_client
+drawable ic_promo
 drawable ic_qr_code
 drawable ic_qr_code_black
+drawable ic_refer
 drawable ic_right_arrow
 drawable ic_settings
 drawable ic_share_button
@@ -1912,6 +1914,7 @@ id card_profil
 id card_profil_dashboard
 id card_promo
 id card_qr
+id card_referall
 id card_status_outlet
 id card_voucher
 id cast_button_type_closed_caption
@@ -2032,6 +2035,7 @@ id img_back
 id img_back_dt_blog
 id img_back_menu
 id img_back_outlet
+id img_back_promo
 id img_blog_template
 id img_detail_blog
 id img_detail_outlet
@@ -2234,6 +2238,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id show_hide
 id sin
 id slide
 id smallLabel
@@ -2349,6 +2354,7 @@ id txt_password
 id txt_pilih_menu
 id txt_pilih_promo
 id txt_poin
+id txt_referall
 id txt_show_location
 id txt_status
 id txt_status_menu

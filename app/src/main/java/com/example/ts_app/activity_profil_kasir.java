@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.ts_app.config.authdata;
+import com.example.ts_app.kasir.activity_dashboard_kasir;
 import com.example.ts_app.pelanggan.activity_profil;
 
 public class activity_profil_kasir extends AppCompatActivity {
@@ -24,6 +25,15 @@ public class activity_profil_kasir extends AppCompatActivity {
         cv_profil = (CardView) findViewById(R.id.card_profil);
         cv_logout = (CardView) findViewById(R.id.card_log_out);
         cv_status_outlet = (CardView) findViewById(R.id.card_status_outlet);
+
+        btn_back = (ImageView) findViewById(R.id.img_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity_profil_kasir.this, activity_dashboard_kasir.class);
+                activity_profil_kasir.this.startActivity(intent);
+            }
+        });
 
         cv_profil.setOnClickListener(new View.OnClickListener() {
             @Override

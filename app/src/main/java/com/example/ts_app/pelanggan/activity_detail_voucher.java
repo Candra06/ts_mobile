@@ -3,8 +3,10 @@ package com.example.ts_app.pelanggan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,6 +44,15 @@ public class activity_detail_voucher extends AppCompatActivity {
         txt_voucher = (TextView) findViewById(R.id.txt_nama_voucher);
 
         img_qr_voucher = (ImageView) findViewById(R.id.img_qr_voucher);
+        img_back = (ImageView) findViewById(R.id.img_back);
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(activity_detail_voucher.this, activity_voucher.class);
+                activity_detail_voucher.this.startActivity(in);
+            }
+        });
 
         Bundle bundle = getIntent().getExtras();
         kd_detail = bundle.getString("kd_detail");

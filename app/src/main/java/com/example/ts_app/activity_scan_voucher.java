@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -61,6 +62,7 @@ public class activity_scan_voucher extends AppCompatActivity {
     View dialogView;
     AlertDialog.Builder dialog;
     LayoutInflater inflater;
+    ImageView img_back;
 
     CharSequence options[] = new CharSequence[] {"Call", "SMS", "Email"};
 
@@ -74,7 +76,7 @@ public class activity_scan_voucher extends AppCompatActivity {
         btnscan = (Button) findViewById(R.id.btn_scan);
         pd = new ProgressDialog(activity_scan_voucher.this);
 
-
+        img_back = (ImageView) findViewById(R.id.img_back);
         requestMultiplePermissions();
 
 
@@ -110,6 +112,14 @@ public class activity_scan_voucher extends AppCompatActivity {
                 });
                 builder.show();
 
+            }
+        });
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(activity_scan_voucher.this, activity_dashboard_kasir.class);
+                activity_scan_voucher.this.startActivity(in);
             }
         });
     }

@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -44,6 +45,7 @@ public class fragment_menu extends Fragment {
     private RecyclerView list_menu;
     private adapter_menu adapter_menu;
     RecyclerView.LayoutManager mManager;
+    SwipeRefreshLayout swap_layout;
 
     private OnFragmentInteractionListener mListener;
 
@@ -72,16 +74,30 @@ public class fragment_menu extends Fragment {
 
         pd = new ProgressDialog(getActivity());
 
-        list_menu = (RecyclerView)v.findViewById(R.id.recycler_menu);
+        list_menu = (RecyclerView) v.findViewById(R.id.recycler_menu);
         list_menu.setHasFixedSize(true);
         listMenu = new ArrayList<>();
-        adapter_menu = new adapter_menu(getActivity(),(ArrayList<mdl_menu>) listMenu);
-        mManager = new GridLayoutManager(getActivity(),2);
+        adapter_menu = new adapter_menu(getActivity(), (ArrayList<mdl_menu>) listMenu);
+        mManager = new GridLayoutManager(getActivity(), 2);
         list_menu.setLayoutManager(mManager);
+
+        swap_layout = (SwipeRefreshLayout) v.findViewById(R.id.swipe_dashboard);
+        swap_layout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                reload();
+            }
+        });
 
         list_menu.setAdapter(adapter_menu);
         loadJson();
         return v;
+    }
+
+    public void reload() {
+        listMenu.clear();
+        loadJson();
+        swap_layout.setRefreshing(false);
     }
 
     public void loadJson() {
@@ -122,7 +138,7 @@ public class fragment_menu extends Fragment {
                     pd.cancel();
                 }
             }
-        },new Response.ErrorListener() {
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 pd.cancel();

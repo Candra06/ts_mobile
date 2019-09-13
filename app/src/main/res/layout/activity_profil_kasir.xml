@@ -108,7 +108,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/sf_pro_display_medium"
                         android:paddingLeft="10dp"
-                        android:text="Buka outlet"
+                        android:text="Set lokasi outlet"
                         android:textSize="15sp" />
 
                     <ImageView

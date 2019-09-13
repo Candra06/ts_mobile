@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -58,6 +59,8 @@ public class fragment_home extends Fragment {
     RecyclerView.LayoutManager mManager, mBlogManager;
     AlertDialog.Builder dialog;
 
+    SwipeRefreshLayout swap;
+
     RecyclerView recyclerView;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -103,9 +106,18 @@ public class fragment_home extends Fragment {
 
         list_blog.setAdapter(adapter_blog);
         list_promo.setAdapter(adapter_promo);
+
+        swap = (SwipeRefreshLayout)v.findViewById(R.id.swipe_dashboard);
         loadPromo();
         profil();
         loadBlog();
+
+        swap.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                reload();
+            }
+        });
         return v;
     }
 
@@ -312,5 +324,14 @@ public class fragment_home extends Fragment {
         };
 
         AppController.getInstance().addToRequestQueue(senddata);
+    }
+
+    public void reload(){
+        loadBlog();
+        loadPromo();
+        profil();
+        listBlog.clear();
+        listPromo.clear();
+        swap.setRefreshing(false);
     }
 }

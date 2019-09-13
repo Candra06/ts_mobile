@@ -26,12 +26,16 @@ import com.google.android.gms.location.LocationListener;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -66,6 +70,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private LatLng latLng;
     private Marker marker;
+    SearchView cari_lokasi;
 
     List addresses = new ArrayList();
     Geocoder geocoder;
@@ -85,6 +90,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mapFragment.getMapAsync(this);
 
+        cari_lokasi = (SearchView) findViewById(R.id.search_location);
+        cari_lokasi.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                String loc = cari_lokasi.getQuery().toString();
+                List<Address> addresses = null;
+
+                if (loc != null || !loc.equals("")){
+                    Geocoder geocoder = new Geocoder(MapsActivity.this);
+                    try {
+                        addresses = geocoder.getFromLocationName(loc,1);
+
+                    }catch (IOException e){
+
+                    }
+                    Address address = addresses.get(0);
+                    LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+                    mMap.addMarker(new MarkerOptions().position(latLng).title(loc));
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
+                }
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+                return false;
+            }
+        });
+
+        
     }
 
     @Override
@@ -327,5 +363,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         };
 
         AppController.getInstance().addToRequestQueue(stringRequest);
+    }
+
+    public void search_location(){
+        SearchView search = (SearchView) findViewById(R.id.search_location);
+        String location = search.toString();
+        List<Address> addressesList = null;
+
+        if (location !=null || !location.equals("")){
+            Geocoder geocoder = new Geocoder(this);
+            try {
+                addressesList = geocoder.getFromLocationName(location,1);
+                Log.e("Lokasinya", "dapat"+addressesList);
+            } catch (IOException e) {
+                e.printStackTrace();
+                Log.e("Lokasinya", "gk dapat");
+            }
+            Address address = addressesList.get(0);
+            LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+            mMap.addMarker(new MarkerOptions().position(latLng).title(location));
+            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+
+        }
     }
 }

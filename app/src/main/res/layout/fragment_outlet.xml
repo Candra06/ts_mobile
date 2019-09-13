@@ -1,72 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/form_white"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".outlet.fragment_outlet">
 
     <!-- TODO: Update blank fragment layout -->
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:fontFamily="@font/roboto_regular"
-               android:text="Daftar Outlet"
-               android:textAlignment="center"
-               android:textColor="@color/font"
-               android:textSize="23sp"
-               android:background="@color/white"
-               android:paddingTop="8dp"
-               android:paddingBottom="8dp"/>
-       </LinearLayout>
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="200dp"
-           android:orientation="vertical">
-           <com.google.android.gms.maps.MapView
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:id="@+id/map_user">
-
-           </com.google.android.gms.maps.MapView>
-
-       </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Daftar Outlet"
+                android:textAlignment="center"
+                android:textColor="@color/font"
+                android:textSize="23sp" />
+        </LinearLayout>
 
 
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:orientation="vertical"
-           android:layout_marginStart="10dp"
-           android:layout_marginEnd="10dp"
-           android:layout_marginTop="15dp">
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/lokasi"
-               android:visibility="visible"
-               />
 
-               <androidx.recyclerview.widget.RecyclerView
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:id="@+id/recycler_outlet"
-                   android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
 
-               </androidx.recyclerview.widget.RecyclerView>
 
-       </LinearLayout>
-   </LinearLayout>
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/map_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.google.android.gms.maps.MapView>
+
+            </LinearLayout>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_outlet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+
+                <TextView
+                    android:id="@+id/lokasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_outlet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
 
 </FrameLayout>

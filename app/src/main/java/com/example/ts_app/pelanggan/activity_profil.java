@@ -53,7 +53,7 @@ public class activity_profil extends AppCompatActivity {
         btn_profil = (Button) findViewById(R.id.btn_edit_profil);
 
         txt_nama = (TextView) findViewById(R.id.txt_nama);
-        txt_poin = (TextView) findViewById(R.id.txt_poin);
+//        txt_poin = (TextView) findViewById(R.id.txt_poin);
         txt_email = (TextView) findViewById(R.id.txt_email);
         txt_no_hp = (TextView) findViewById(R.id.txt_no_hp);
         txt_domisili = (TextView) findViewById(R.id.txt_domisili);
@@ -131,7 +131,7 @@ public class activity_profil extends AppCompatActivity {
                     }
 
 
-                    txt_poin.setText(data.getString("poin"));
+//                    txt_poin.setText(data.getString("poin"));
 
                 } catch (JSONException e) {
                     Log.e("Erornya", e.getMessage());

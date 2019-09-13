@@ -28,6 +28,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.provider.Settings;
 import android.util.Log;
@@ -94,6 +95,7 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
     TextView txt_lokasi;
     Geocoder geocoder;
     View v;
+    SwipeRefreshLayout swap_layout;
     double latitude = -6.2293867, longitude = 106.6894287;
 
     List addresses = new ArrayList();
@@ -151,6 +153,8 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
             latitude = -6.2293867;
             longitude = 106.6894287;
         }
+        swap_layout = (SwipeRefreshLayout)v.findViewById(R.id.swipe_outlet);
+
 
         geocoder = new Geocoder(getContext(), Locale.getDefault());
         checkLocationPermission();
@@ -168,7 +172,20 @@ public class fragment_outlet extends Fragment implements OnMapReadyCallback, Loc
         mManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         list_outlet.setLayoutManager(mManager);
         list_outlet.setAdapter(adapter_outlet);
+
+        swap_layout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                reload();
+            }
+        });
         return v;
+    }
+
+    public void reload(){
+        listOutlet.clear();
+        loadJson();
+        swap_layout.setRefreshing(false);
     }
 
     @Override

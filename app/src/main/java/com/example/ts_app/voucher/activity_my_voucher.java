@@ -9,6 +9,7 @@ import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -31,6 +32,7 @@ import java.util.Map;
 
 public class activity_my_voucher extends AppCompatActivity {
     ProgressDialog pd;
+
     private List<mdl_voucher> listVoucher;
     private RecyclerView list_voucher;
     private com.example.ts_app.voucher.adapter_myvoucher adapter_myvoucher;
@@ -43,6 +45,7 @@ public class activity_my_voucher extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_voucher);
         pd = new ProgressDialog(activity_my_voucher.this);
+
 
         list_voucher = (RecyclerView) findViewById(R.id.recycler_myVOucher);
         listVoucher = new ArrayList<>();

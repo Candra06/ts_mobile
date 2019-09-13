@@ -51,32 +51,6 @@
         app:layout_constraintVertical_bias="0.001"
         tools:layout_editor_absoluteX="0dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:padding="8dp"
-                android:text="Poin Keakraban"
-                android:textAlignment="center"
-                android:textColor="@color/font"
-                android:textSize="17sp"
-                android:textStyle="normal" />
-
-            <TextView
-                android:id="@+id/txt_poin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Poin Keakraban"
-                android:textAlignment="center"
-                android:textColor="@color/font"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

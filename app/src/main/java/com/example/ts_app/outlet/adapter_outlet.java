@@ -45,8 +45,8 @@ public class adapter_outlet extends RecyclerView.Adapter<adapter_outlet.ViewHold
     public void onBindViewHolder(adapter_outlet.ViewHolder holder, int position) {
         mdl_outlet md = list_outlet.get(position);
         holder.txt_nama_outlet.setText(md.getOutlet());
-//        holder.distance = );
-        holder.txt_distance.setText(String.valueOf(decDis.format(md.getDistance()))+" km");
+        holder.distance = md.getDistance()*1.6;
+        holder.txt_distance.setText(String.valueOf(decDis.format(holder.distance))+" km");
         holder.txt_kd_outlet.setText(md.getKode_outlet());
 
         Picasso.get()

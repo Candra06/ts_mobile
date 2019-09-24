@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_my_point">
+    tools:context=".scan_qr$activity_my_point">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

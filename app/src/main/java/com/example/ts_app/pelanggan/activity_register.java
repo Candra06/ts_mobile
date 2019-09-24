@@ -43,7 +43,7 @@ public class activity_register extends AppCompatActivity {
         progressDialog = new ProgressDialog(activity_register.this);
         txt_nama = findViewById(R.id.txt_nama);
         txt_email = findViewById(R.id.txt_email);
-        txt_email = findViewById(R.id.txt_referall);
+        txt_referal = findViewById(R.id.txt_referall);
         btn_simpan = findViewById(R.id.btn_simpan);
 
         btn_simpan.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +54,14 @@ public class activity_register extends AppCompatActivity {
                 }else if (txt_email.equals("")){
 
                 }else {
-                    register();
+                    if (txt_referal.equals("")){
+                        txt_referal.setText(" ");
+                        Log.d("txt",txt_referal.getText().toString());
+                        register();
+                    }else {
+                        register();
+                    }
+
                 }
             }
         });

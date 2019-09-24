@@ -125,7 +125,7 @@ public class activity_input_password extends AppCompatActivity {
 
                 } catch (JSONException e) {
                     Log.e("Erornya", e.getMessage());
-                    Toast.makeText(activity_input_password.this, "Login Gagal", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(activity_input_password.this, "Login Gagal", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                     Log.e("No_hp", no_hp);
                     Log.e("password", password.getText().toString());

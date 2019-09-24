@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,7 +39,8 @@ public class activity_detail_blog extends AppCompatActivity {
 
     ImageView img_detail_blog, img_back;
 
-    TextView txt_title, txt_conten, txt_tgl, txt_author;
+    TextView txt_title, txt_tgl, txt_author;
+    WebView txt_conten;
     String kd_blog;
 
     @Override
@@ -52,7 +54,7 @@ public class activity_detail_blog extends AppCompatActivity {
         kd_blog = bundle.getString("kd_blog");
 
         txt_title = (TextView) findViewById(R.id.txt_title_blog);
-        txt_conten = (TextView) findViewById(R.id.txt_conten);
+        txt_conten = (WebView) findViewById(R.id.txt_conten);
         txt_tgl = (TextView) findViewById(R.id.tgl_upload);
         txt_author = (TextView) findViewById(R.id.txt_author);
 
@@ -85,10 +87,11 @@ public class activity_detail_blog extends AppCompatActivity {
 
 
                     txt_title.setText(data.getString("judul"));
-                    txt_conten.setText(data.getString("conten"));
+//                    txt_conten(data.getString("conten"));
+                    txt_conten.loadUrl(ServerAPI.IPSever);
                     txt_author.setText(data.getString("nama"));
                     txt_tgl.setText(ImageUtil.settanggal(data.getString("tgl_upload")));
-
+                    txt_conten.loadUrl(ServerAPI.IPSever+"/Front/detail_blog/"+data.getString("kd_blog"));
                     Picasso.get()
                             .load(ServerAPI.IPSever+data.getString("foto"))
                             .into(img_detail_blog);

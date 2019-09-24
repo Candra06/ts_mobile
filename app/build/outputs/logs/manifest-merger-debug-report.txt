@@ -497,11 +497,11 @@ MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] /home
 		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:33:9-41
 		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:33:9-41
 	android:roundIcon
-		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:34:9-54
-		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:34:9-54
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:34:9-43
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:34:9-43
 	android:icon
-		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:32:9-43
-		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:32:9-43
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:32:9-38
+		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:32:9-38
 	android:allowBackup
 		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:31:9-35
 		ADDED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml:31:9-35
@@ -951,10 +951,10 @@ INJECTED from /home/prima/Android/AndroidProject/app/src/debug/AndroidManifest.x
 	android:minSdkVersion
 		INJECTED from /home/prima/Android/AndroidProject/app/src/main/AndroidManifest.xml
 		INJECTED from /home/prima/Android/AndroidProject/app/src/debug/AndroidManifest.xml
-activity#com.example.ts_app.activity_my_point
-ADDED from /home/prima/Android/AndroidProject/app/src/debug/AndroidManifest.xml:4:9-82
+activity#com.example.ts_app.scan_qr$activity_my_point
+ADDED from /home/prima/Android/AndroidProject/app/src/debug/AndroidManifest.xml:4:9-90
 	android:name
-		ADDED from /home/prima/Android/AndroidProject/app/src/debug/AndroidManifest.xml:4:19-70
+		ADDED from /home/prima/Android/AndroidProject/app/src/debug/AndroidManifest.xml:4:19-78
 activity#com.karumi.dexter.DexterActivity
 ADDED from [com.karumi:dexter:5.0.0] /home/prima/.gradle/caches/transforms-2/files-2.1/f4938dda7bd52f50e669574b8b3e5d7b/jetified-dexter-5.0.0/AndroidManifest.xml:27:9-29:72
 	android:theme

@@ -73,14 +73,21 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <TextView
+                    <WebView
                         android:id="@+id/txt_conten"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="contennya"
-                        android:layout_marginBottom="10dp"
-                        android:singleLine="false"
-                        android:maxLines="4"/>
+                        tools:ignore="WebViewLayout">
+
+                    </WebView>
+<!--                    <TextView-->
+<!--                        android:id="@+id/txt_conten"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="contennya"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:singleLine="false"-->
+<!--                        android:maxLines="4"/>-->
                 </LinearLayout>
             </ScrollView>
 

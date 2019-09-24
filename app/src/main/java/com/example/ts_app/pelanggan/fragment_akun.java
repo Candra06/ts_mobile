@@ -15,10 +15,9 @@ import android.widget.ImageView;
 
 import com.example.ts_app.R;
 import com.example.ts_app.activity_login;
-import com.example.ts_app.activity_my_point;
 import com.example.ts_app.activity_scan_voucher;
 import com.example.ts_app.config.authdata;
-import com.example.ts_app.voucher.activity_my_voucher;
+import com.example.ts_app.scan_qr;
 
 
 public class fragment_akun extends Fragment {
@@ -85,7 +84,7 @@ public class fragment_akun extends Fragment {
         cardVoucher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(getActivity(), activity_my_point.class);
+                Intent myIntent = new Intent(getActivity(), scan_qr.activity_my_point.class);
                 myIntent.putExtra("kd_auth", authdata.getInstance(getActivity()).getAuth()); //Optional parameters
                 getActivity().startActivity(myIntent);
             }

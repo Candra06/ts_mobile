@@ -289,6 +289,7 @@ public class fragment_home extends Fragment {
                                 md.setKode_blog(data.getString("kd_blog"));
                                 md.setJudul(data.getString("judul"));
                                 md.setGambar(data.getString("foto"));
+                                Log.e("kode blog", data.getString("kd_blog"));
                                 listBlog.add(md);
                             } catch (Exception ea) {
                                 ea.printStackTrace();

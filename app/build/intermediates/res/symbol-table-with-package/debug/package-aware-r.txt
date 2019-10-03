@@ -1,4 +1,4 @@
-com.example.ts_app
+com.TemanSebangkuApp.ts_app
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -2088,7 +2088,6 @@ id filled
 id fixed
 id flip
 id forever
-id gender
 id get_latitude
 id get_location
 id get_longitude
@@ -2168,6 +2167,8 @@ id linearLayout
 id linearLayout2
 id linearLayout3
 id linearLayout4
+id linearLayout5
+id linearLayout6
 id linear_alamat
 id linear_domisili
 id linear_gender
@@ -2176,6 +2177,7 @@ id linear_nama
 id linear_noHp
 id linear_password
 id linear_promo
+id linear_tgl
 id linearsolusi
 id listMode
 id list_item
@@ -2355,6 +2357,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spingender
 id spline
 id split_action_bar
 id spread
@@ -2475,6 +2478,7 @@ id txt_status_voucher
 id txt_sub_title
 id txt_syarat_voucher
 id txt_tgl_lahir
+id txt_tgl_lahir_edit
 id txt_title
 id txt_title_blog
 id txt_title_menu

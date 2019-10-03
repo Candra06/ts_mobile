@@ -22,7 +22,7 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="225dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -233,11 +233,12 @@
         android:id="@+id/txt_hint_splash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="Teman Sebangku App ©CopyRight2019"
+        android:text="TemanSebangku©CopyRight2019"
         android:textAlignment="center"
         android:textColor="@color/hint"
+        android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.977"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 

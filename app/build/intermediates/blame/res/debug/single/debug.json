@@ -4,24 +4,24 @@
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/a1206cad59a77a9e878e828d9c8f4cba/mediarouter-1.0.0-alpha5/res/drawable-xxxhdpi-v4/ic_group_collapse_12.png"
     },
     {
-        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/anim_fade_in_left.xml.flat",
-        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/ba8cb39f78561ba3b8374405dbe17b13/jetified-MaterialSearchBar-0.8.2/res/anim/fade_in_left.xml"
-    },
-    {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_mr_button_connected_00_dark.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/a1206cad59a77a9e878e828d9c8f4cba/mediarouter-1.0.0-alpha5/res/drawable-xhdpi-v4/ic_mr_button_connected_00_dark.png"
+    },
+    {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/anim_fade_in_left.xml.flat",
+        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/ba8cb39f78561ba3b8374405dbe17b13/jetified-MaterialSearchBar-0.8.2/res/anim/fade_in_left.xml"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/color_abc_tint_seek_thumb.xml.flat",
-        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/res/color/abc_tint_seek_thumb.xml"
-    },
-    {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/color_abc_tint_seek_thumb.xml.flat",
+        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/res/color/abc_tint_seek_thumb.xml"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_09_light.png.flat",
@@ -32,32 +32,32 @@
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/a1206cad59a77a9e878e828d9c8f4cba/mediarouter-1.0.0-alpha5/res/drawable-xhdpi-v4/ic_mr_button_connected_30_dark.png"
     },
     {
-        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_22_dark.png.flat",
-        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/a1206cad59a77a9e878e828d9c8f4cba/mediarouter-1.0.0-alpha5/res/drawable-xxhdpi-v4/ic_mr_button_connecting_22_dark.png"
-    },
-    {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable_ic_mtrl_chip_checked_circle.xml.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/cb634fe4b4d1fdfcd5255e485d30a0c1/material-1.0.0/res/drawable/ic_mtrl_chip_checked_circle.xml"
+    },
+    {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_22_dark.png.flat",
+        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/a1206cad59a77a9e878e828d9c8f4cba/mediarouter-1.0.0-alpha5/res/drawable-xxhdpi-v4/ic_mr_button_connecting_22_dark.png"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connected_25_light.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/a1206cad59a77a9e878e828d9c8f4cba/mediarouter-1.0.0-alpha5/res/drawable-xxhdpi-v4/ic_mr_button_connected_25_light.png"
     },
     {
-        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connected_28_light.png.flat",
-        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/a1206cad59a77a9e878e828d9c8f4cba/mediarouter-1.0.0-alpha5/res/drawable-xxhdpi-v4/ic_mr_button_connected_28_light.png"
-    },
-    {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_quantum_ic_forward_30_white_24.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/240dbd8750f3d85085d9aa484a897688/jetified-play-services-cast-framework-12.0.1/res/drawable-xhdpi-v4/quantum_ic_forward_30_white_24.png"
     },
     {
-        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
-        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connected_28_light.png.flat",
+        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/a1206cad59a77a9e878e828d9c8f4cba/mediarouter-1.0.0-alpha5/res/drawable-xxhdpi-v4/ic_mr_button_connected_28_light.png"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_powered_by_google_light.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/0a16809eaebbf18893fb926cee803287/jetified-play-services-places-12.0.1/res/drawable-hdpi-v4/powered_by_google_light.png"
+    },
+    {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
+        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -76,12 +76,12 @@
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/240dbd8750f3d85085d9aa484a897688/jetified-play-services-cast-framework-12.0.1/res/drawable-hdpi-v4/quantum_ic_closed_caption_white_36.png"
     },
     {
-        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
-        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/fbedcddada7ea919073cff901531dd0c/jetified-play-services-base-12.0.1/res/drawable-xhdpi-v4/common_full_open_on_phone.png"
-    },
-    {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
+        "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/fbedcddada7ea919073cff901531dd0c/jetified-play-services-base-12.0.1/res/drawable-xhdpi-v4/common_full_open_on_phone.png"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_quantum_ic_keyboard_arrow_down_white_36.png.flat",
@@ -128,12 +128,12 @@
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/cb634fe4b4d1fdfcd5255e485d30a0c1/material-1.0.0/res/anim/design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable_ic_magnifier.xml.flat",
-        "source": "/home/prima/Android/AndroidProject/app/src/main/res/drawable/ic_magnifier.xml"
-    },
-    {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
         "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/0a24f66f30aa88e58514b4772733e5a7/core-1.1.0-rc01/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable_ic_magnifier.xml.flat",
+        "source": "/home/prima/Android/AndroidProject/app/src/main/res/drawable/ic_magnifier.xml"
     },
     {
         "merged": "/home/prima/Android/AndroidProject/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_pressed_holo_dark.9.png.flat",

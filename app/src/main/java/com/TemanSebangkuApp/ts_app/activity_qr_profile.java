@@ -3,13 +3,17 @@ package com.TemanSebangkuApp.ts_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.TemanSebangkuApp.ts_app.R;
+import com.TemanSebangkuApp.ts_app.pelanggan.activity_profil;
+import com.TemanSebangkuApp.ts_app.pelanggan.activity_tab_dashboard;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -30,7 +34,7 @@ import java.util.Map;
 
 public class activity_qr_profile extends AppCompatActivity {
     TextView txt_nama;
-    ImageView img_my_qr;
+    ImageView img_my_qr, img_kembali;
     ProgressDialog pd;
     String my_kode;
     @Override
@@ -43,7 +47,18 @@ public class activity_qr_profile extends AppCompatActivity {
         Log.e("kodenya", my_kode);
         pd = new ProgressDialog(activity_qr_profile.this);
         img_my_qr = (ImageView) findViewById(R.id.my_qr);
+        img_kembali = (ImageView) findViewById(R.id.img_back);
         txt_nama = (TextView) findViewById(R.id.my_profile);
+
+        img_kembali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity_qr_profile.this, activity_profil.class);
+//                intent.putExtra("kd_auth", authdata.getInstance(activity_profil.this).getAuth()); //Optional parameters
+
+                activity_qr_profile.this.finish();
+            }
+        });
         loadJson();
     }
 

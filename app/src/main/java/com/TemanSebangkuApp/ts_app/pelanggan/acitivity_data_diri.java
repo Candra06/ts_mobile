@@ -198,7 +198,7 @@ public class acitivity_data_diri extends AppCompatActivity implements AdapterVie
 
                 } catch (JSONException e) {
                     Log.e("Erornya", e.getMessage());
-                    Toast.makeText(acitivity_data_diri.this, "Masuk Gagal", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(acitivity_data_diri.this, "Masuk Gagal", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
 
                 }
@@ -208,7 +208,7 @@ public class acitivity_data_diri extends AppCompatActivity implements AdapterVie
             @Override
             public void onErrorResponse(VolleyError error) {
                 pd.dismiss();
-                Toast.makeText(acitivity_data_diri.this, error.getMessage(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(acitivity_data_diri.this, error.getMessage(), Toast.LENGTH_LONG).show();
                 Log.d("Erronya ", error.getMessage(), error);
             }
         }) {

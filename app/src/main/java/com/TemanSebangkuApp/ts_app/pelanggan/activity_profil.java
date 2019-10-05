@@ -146,7 +146,7 @@ public class activity_profil extends AppCompatActivity {
 
                 } catch (JSONException e) {
                     Log.e("Erornya", e.getMessage());
-                    Toast.makeText(activity_profil.this, "Masuk Gagal", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(activity_profil.this, "Masuk Gagal", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
 
                 }
@@ -156,7 +156,7 @@ public class activity_profil extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 pd.dismiss();
-                Toast.makeText(activity_profil.this, error.getMessage(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(activity_profil.this, error.getMessage(), Toast.LENGTH_LONG).show();
                 Log.d("Erronya ", error.getMessage(), error);
             }
         }) {

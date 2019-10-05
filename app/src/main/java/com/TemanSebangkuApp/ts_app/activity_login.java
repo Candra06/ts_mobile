@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.TemanSebangkuApp.ts_app.R;
@@ -22,20 +23,29 @@ import com.TemanSebangkuApp.ts_app.config.ServerAPI;
 import com.TemanSebangkuApp.ts_app.config.authdata;
 import com.TemanSebangkuApp.ts_app.kasir.activity_dashboard_kasir;
 import com.TemanSebangkuApp.ts_app.pelanggan.activity_tab_dashboard;
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class activity_login extends AppCompatActivity {
 
     EditText txtNoHp;
+    Spinner spinnegara;
     Button btn_login;
     ProgressDialog pd;
 
+    FirebaseAuth auth;
+
     public String xdataauth;
+    String codeSent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +53,9 @@ public class activity_login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         pd = new ProgressDialog(activity_login.this);
         btn_login = findViewById(R.id.btn_join);
+
+        spinnegara = findViewById(R.id.spinnegara);
+        auth = FirebaseAuth.getInstance();
 
         txtNoHp = findViewById(R.id.txt_no_hp);
         btn_login.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +65,12 @@ public class activity_login extends AppCompatActivity {
 
                 if (no_hp.equals("")) {
                     Toast.makeText(activity_login.this, "Harap Masukkan Nomor HP anda", Toast.LENGTH_LONG).show();
-                } else {
+                } else if (no_hp.length() < 11){
+                    Toast.makeText(activity_login.this, "Nomor HP tidak valid", Toast.LENGTH_LONG).show();
+                    txtNoHp.setError("Nomor HP tidak valid");
+                    txtNoHp.requestFocus();
+                    return;
+                }else {
                     Cek_akun();
                 }
             }
@@ -78,7 +96,7 @@ public class activity_login extends AppCompatActivity {
                             String judul = "Masukkan password";
                             String sub_title = "Silahkan Login";
                             String no_hp = txtNoHp.getText().toString();
-                            Toast.makeText(activity_login.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
+//                            Toast.makeText(activity_login.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_login.this, activity_input_password.class);
                             myIntent.putExtra("no_hp", no_hp); //Optional parameters
                             myIntent.putExtra("judul", judul); //Optional parameters
@@ -91,26 +109,26 @@ public class activity_login extends AppCompatActivity {
                             String judul = "Masukkan password";
                             String sub_title = "Silahkan masukkan password anda";
                             String no_hp = txtNoHp.getText().toString();
-                            Toast.makeText(activity_login.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
+//                            Toast.makeText(activity_login.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_login.this, activity_input_password.class);
                             myIntent.putExtra("no_hp", no_hp); //Optional parameters
                             myIntent.putExtra("judul", judul); //Optional parameters
                             myIntent.putExtra("sub_title", sub_title); //Optional parameters
                             myIntent.putExtra("type", type); //Optional parameters
                             activity_login.this.startActivity(myIntent);
-                            Log.e("toastnya : ", "selamat datang pelanggan baru");
                         } else if (data.getInt("status") == 0) {
                             String type = "0";
                             String judul = "Buat password anda";
                             String sub_title = "Amankan akun anda";
                             String no_hp = txtNoHp.getText().toString();
-                            Toast.makeText(activity_login.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
+//                            Toast.makeText(activity_login.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_login.this, activity_input_password.class);
                             myIntent.putExtra("no_hp", no_hp); //Optional parameters
                             myIntent.putExtra("judul", judul); //Optional parameters
                             myIntent.putExtra("sub_title", sub_title); //Optional parameters
                             myIntent.putExtra("type", type); //Optional parameters
                             activity_login.this.startActivity(myIntent);
+                            Verifikasi();
                             Log.e("toastnya : ", "selamat datangpelanggan");
                         } else {
                             Log.e("toastnya : ", "");
@@ -158,6 +176,50 @@ public class activity_login extends AppCompatActivity {
 
         AppController.getInstance().addToRequestQueue(stringRequest);
     }
+
+    public void Verifikasi(){
+        String phone = txtNoHp.getText().toString();
+
+        if(phone.isEmpty()){
+            txtNoHp.setError("Nomor HP harus diisi");
+            txtNoHp.requestFocus();
+            return;
+        }
+
+        if(phone.length() < 11 ){
+            txtNoHp.setError("Nomor HP tidak valid");
+            txtNoHp.requestFocus();
+            return;
+        }
+
+
+        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                phone,        // Phone number to verify
+                60,                 // Timeout duration
+                TimeUnit.SECONDS,   // Unit of timeout
+                this,               // Activity (for callback binding)
+                mCallbacks);        // OnVerificationStateChangedCallbacks
+    }
+
+    PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+        @Override
+        public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
+
+        }
+
+        @Override
+        public void onVerificationFailed(FirebaseException e) {
+
+        }
+
+        @Override
+        public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+            super.onCodeSent(s, forceResendingToken);
+
+            codeSent = s;
+        }
+    };
 
 
 

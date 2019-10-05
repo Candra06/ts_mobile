@@ -82,11 +82,11 @@ public class activity_register extends AppCompatActivity {
                         Toast.makeText(activity_register.this, data.getString("pesan"), Toast.LENGTH_LONG).show();
                         Intent myIntent = new Intent(activity_register.this, activity_tab_dashboard.class);
                         activity_register.this.startActivity(myIntent);
-                        Toast.makeText(activity_register.this, "Input Berhasil "+data.getString("pesan"), Toast.LENGTH_LONG).show();
+//                        Toast.makeText(activity_register.this, "Input Berhasil "+data.getString("pesan"), Toast.LENGTH_LONG).show();
                         SharedPrefManager.getInstance(activity_register.this).register();
                     } else {
 
-                        Toast.makeText(activity_register.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
+//                        Toast.makeText(activity_register.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
                         Intent myIntent = new Intent(activity_register.this, activity_register.class);
                         activity_register.this.startActivity(myIntent);
                         Toast.makeText(activity_register.this, "Input Gagal "+data.getString("pesan"), Toast.LENGTH_LONG).show();
@@ -94,7 +94,7 @@ public class activity_register extends AppCompatActivity {
 
                 } catch (JSONException e) {
                     Log.e("Erornya", e.getMessage());
-                    Toast.makeText(activity_register.this, "Masuk Gagal", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(activity_register.this, "Masuk Gagal", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
 
                 }
@@ -104,7 +104,7 @@ public class activity_register extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 progressDialog.dismiss();
-                Toast.makeText(activity_register.this, error.getMessage(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(activity_register.this, error.getMessage(), Toast.LENGTH_LONG).show();
                 Log.d("Erronya ", error.getMessage(), error);
             }
         }) {

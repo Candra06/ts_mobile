@@ -101,19 +101,19 @@ public class activity_input_password extends AppCompatActivity {
 //                        Toast.makeText(activity_input_password.this, "levelnya "+mydata.getString("level"), Toast.LENGTH_SHORT).show();
                         Log.d("pesan", "levelnya di input password "+mydata.getString("level"));
                         if (get_type.equals("2")){
-                            Toast.makeText(activity_input_password.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
+//                            Toast.makeText(activity_input_password.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_input_password.this, activity_dashboard_kasir.class);
                             activity_input_password.this.startActivity(myIntent);
                         }else if (get_type.equals("3")){
-                            Toast.makeText(activity_input_password.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
+//                            Toast.makeText(activity_input_password.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_input_password.this, activity_tab_dashboard.class);
                             activity_input_password.this.startActivity(myIntent);
                         }else if (get_type.equals("0")){
-                            Toast.makeText(activity_input_password.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
+//                            Toast.makeText(activity_input_password.this, "Selamat Datang "+data.getString("pesan"), Toast.LENGTH_LONG).show();
                             Intent myIntent = new Intent(activity_input_password.this, activity_register.class);
                             activity_input_password.this.startActivity(myIntent);
                         }else {
-                            Toast.makeText(activity_input_password.this, "Selamat Goblok "+get_type, Toast.LENGTH_LONG).show();
+//                            Toast.makeText(activity_input_password.this, "Selamat Goblok "+get_type, Toast.LENGTH_LONG).show();
                         }
                         xdatauth = data.getString("auth_key");
                         Log.e("auth_key", data.getString("auth_key"));
@@ -139,7 +139,7 @@ public class activity_input_password extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 pd.dismiss();
-                Toast.makeText(activity_input_password.this, error.getMessage(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(activity_input_password.this, error.getMessage(), Toast.LENGTH_LONG).show();
                 Log.d("Erronya ", error.getMessage(), error);
             }
         }) {

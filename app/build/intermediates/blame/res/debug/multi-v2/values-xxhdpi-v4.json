@@ -4,7 +4,7 @@
             "outputFile": "/home/prima/Android/AndroidProject/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xxhdpi-v4/values-xxhdpi-v4.xml",
             "map": [
                 {
-                    "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/bd3b294dc1de951ce1e74f56c4ddfbf0/jetified-core-1.9/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+                    "source": "/home/prima/.gradle/caches/transforms-2/files-2.1/690abe1aa8a549636da46b4d3e16a89a/jetified-core-1.9/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

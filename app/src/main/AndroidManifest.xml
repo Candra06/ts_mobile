@@ -53,6 +53,7 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
         <activity android:name=".activity_get_location" />
+        <activity android:name=".activity_verif_code" />
         <activity android:name=".activity_add_detail" />
         <activity android:name=".activity_set_menu" />
         <activity android:name=".activity_edit_profil_kasir" />

@@ -4,34 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_login">
+    tools:context=".activity_verif_code">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="225dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094"
-        app:srcCompat="@drawable/ic_logo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Login"
+        android:text="Verifikasi"
         android:textColor="@color/font_primary"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.045" />
 
     <TextView
@@ -39,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Ayo join dan nikmati keakrabannya!"
+        android:text="Masukkan Kode Verifikasi!"
         android:textColor="@color/font_primary"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,21 +67,16 @@
                 android:padding="2dp"
                 app:srcCompat="@drawable/ic_phone"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="+62"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="3dp"
-                />
+
 
             <EditText
-                android:id="@+id/txt_no_hp"
+                android:id="@+id/txt_verifikasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:background="#00000000"
                 android:fontFamily="@font/sf_pro_display_light"
-                android:hint="Nomor HP"
+                android:hint="Kode Verifikasi"
                 android:inputType="number"
                 android:textColorHint="@color/hint" />
 
@@ -103,7 +85,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/btn_join"
+        android:id="@+id/btn_verif"
         android:layout_width="333dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
@@ -111,18 +93,18 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_radius_outline"
-        android:text="Masuk"
+        android:text="Verifikasi"
         android:textColor="#030303"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.322"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.542" />
+        app:layout_constraintVertical_bias="0.11" />
 
     <LinearLayout
+        android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -144,8 +126,5 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="-16dp" />
     </LinearLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
